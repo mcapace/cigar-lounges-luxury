@@ -120,6 +120,12 @@
     "node": ">=18.17.0",
     "npm": ">=9.0.0"
   },
+  "overrides": {
+    "@react-three/drei": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0"
+    }
+  },
   "browserslist": {
     "production": [
       ">0.2%",
