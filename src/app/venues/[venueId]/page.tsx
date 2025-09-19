@@ -21,9 +21,9 @@ export default async function VenuePage({ params }: VenuePageProps) {
 
   return (
     <>
-      <LocalBusinessStructuredData venueId={params.venueId} />
-      <BreadcrumbStructuredData venueId={params.venueId} />
-      <VenuePageClient venueId={params.venueId} />
+      <LocalBusinessStructuredData venueId={venueId} />
+      <BreadcrumbStructuredData venueId={venueId} />
+      <VenuePageClient venueId={venueId} />
     </>
   );
 }
