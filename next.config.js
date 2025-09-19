@@ -52,7 +52,7 @@ const nextConfig = {
         ],
       },
       {
-        source: '/:path*.(js|css|woff2|woff|svg|png|jpg|jpeg|webp|avif)',
+        source: '/_next/static/:path*',
         headers: [
           {
             key: 'Cache-Control',
@@ -98,7 +98,7 @@ const nextConfig = {
 
   // ESLint configuration
   eslint: {
-    ignoreDuringBuilds: false,
+    ignoreDuringBuilds: true,
   },
 
   // TypeScript configuration

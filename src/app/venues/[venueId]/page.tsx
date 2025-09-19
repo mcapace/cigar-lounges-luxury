@@ -4,15 +4,16 @@ import { VenuePageClient } from './VenuePageClient';
 import { LocalBusinessStructuredData, BreadcrumbStructuredData } from '@/components/seo/StructuredData';
 
 interface VenuePageProps {
-  params: {
+  params: Promise<{
     venueId: string;
-  };
+  }>;
 }
 
-export default function VenuePage({ params }: VenuePageProps) {
+export default async function VenuePage({ params }: VenuePageProps) {
+  const { venueId } = await params;
   const venue = venueData.brands
     .flatMap(brand => brand.locations)
-    .find(location => location.id === params.venueId);
+    .find(location => location.id === venueId);
 
   if (!venue) {
     notFound();
@@ -38,9 +39,10 @@ export async function generateStaticParams() {
 
 // Generate metadata for each venue page
 export async function generateMetadata({ params }: VenuePageProps) {
+  const { venueId } = await params;
   const venue = venueData.brands
     .flatMap(brand => brand.locations)
-    .find(location => location.id === params.venueId);
+    .find(location => location.id === venueId);
 
   if (!venue) {
     return {
