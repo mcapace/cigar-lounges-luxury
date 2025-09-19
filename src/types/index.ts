@@ -1,3 +1,30 @@
+export interface CigarLounge {
+  id: string;
+  name: string;
+  shortName: string;
+  tagline: string;
+  description: string;
+  address: string;
+  neighborhood: string;
+  phone: string;
+  hours: Record<string, string>;
+  images: {
+    hero: string;
+    gallery: string[];
+  };
+  features: string[];
+  signature: string;
+  coordinates: {
+    lat: number;
+    lng: number;
+  };
+  perfectFor?: string[];
+  historical?: {
+    year: number;
+    milestone: string;
+  }[];
+}
+
 export interface Venue {
   id: string;
   name: string;
