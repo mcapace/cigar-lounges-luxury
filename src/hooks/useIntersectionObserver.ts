@@ -1,51 +1,54 @@
 'use client';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 interface UseIntersectionObserverOptions {
-  threshold?: number | number[];
-  root?: Element | null;
+  threshold?: number;
   rootMargin?: string;
-  onIntersect?: () => void;
-  onLeave?: () => void;
+  triggerOnce?: boolean;
 }
 
 export function useIntersectionObserver(
-  elementRef: React.RefObject<Element | null>,
   options: UseIntersectionObserverOptions = {}
 ) {
-  const { threshold = 0, root = null, rootMargin = '0px', onIntersect, onLeave } = options;
-  const observerRef = useRef<IntersectionObserver | null>(null);
+  const [isIntersecting, setIsIntersecting] = useState(false);
+  const [hasIntersected, setHasIntersected] = useState(false);
+  const ref = useRef<HTMLElement>(null);
+
+  const {
+    threshold = 0.1,
+    rootMargin = '0px',
+    triggerOnce = true,
+  } = options;
 
   useEffect(() => {
-    const element = elementRef.current;
+    const element = ref.current;
     if (!element) return;
 
-    observerRef.current = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            onIntersect?.();
-          } else {
-            onLeave?.();
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        const isElementIntersecting = entry.isIntersecting;
+        setIsIntersecting(isElementIntersecting);
+
+        if (isElementIntersecting && !hasIntersected) {
+          setHasIntersected(true);
+          if (triggerOnce) {
+            observer.unobserve(element);
           }
-        });
+        }
       },
       {
         threshold,
-        root,
         rootMargin,
       }
     );
 
-    observerRef.current.observe(element);
+    observer.observe(element);
 
     return () => {
-      if (observerRef.current) {
-        observerRef.current.disconnect();
-      }
+      observer.unobserve(element);
     };
-  }, [elementRef, threshold, root, rootMargin, onIntersect, onLeave]);
+  }, [threshold, rootMargin, triggerOnce, hasIntersected]);
 
-  return observerRef.current;
+  return { ref, isIntersecting, hasIntersected };
 }

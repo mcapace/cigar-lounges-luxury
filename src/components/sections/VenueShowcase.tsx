@@ -23,12 +23,18 @@ export function VenueShowcase() {
         <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           
           {/* Davidoff Card (spans both locations) */}
-          <div className="bg-white border border-light-gray p-8 hover:shadow-xl transition-all">
+          <motion.div 
+            className="bg-white border border-light-gray p-8 hover:shadow-xl transition-all hover-lift glass-morphism"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <div className="mb-6">
               <span className="text-2xl font-bold text-charcoal">Davidoff</span>
             </div>
             <h3 className="venue-name text-3xl mb-4">Davidoff of Geneva</h3>
-            <p className="text-medium-gray mb-6 leading-relaxed">
+            <p className="body-text text-medium-gray mb-6">
               Experience Swiss precision at two distinguished Manhattan locations
             </p>
             <div className="space-y-4 mb-8">
@@ -53,15 +59,21 @@ export function VenueShowcase() {
             >
               Explore Davidoff
             </button>
-          </div>
+          </motion.div>
           
           {/* Barclay Rex Card */}
-          <div className="bg-white border border-light-gray p-8 hover:shadow-xl transition-all">
+          <motion.div 
+            className="bg-white border border-light-gray p-8 hover:shadow-xl transition-all hover-lift glass-morphism"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             <div className="mb-6">
               <span className="text-2xl font-bold text-charcoal">Barclay Rex</span>
             </div>
             <h3 className="venue-name text-3xl mb-4">Barclay Rex</h3>
-            <p className="text-medium-gray mb-6 leading-relaxed">
+            <p className="body-text text-medium-gray mb-6">
               New York's original tobacconist, serving Wall Street since 1910
             </p>
             <div className="space-y-4 mb-8">
@@ -86,7 +98,7 @@ export function VenueShowcase() {
             >
               Explore Barclay Rex
             </button>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -31,14 +31,14 @@ export function HeroSection() {
         
         {/* Large, elegant headline */}
         <motion.h1 
-          className="hero-title text-charcoal mb-8"
+          className="hero-title text-charcoal mb-8 font-display-optimized"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           Three Legendary
           <motion.span 
-            className="block text-gold italic font-serif"
+            className="hero-subtitle block text-gold gradient-text"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -49,7 +49,7 @@ export function HeroSection() {
         
         {/* Refined subtext */}
         <motion.p 
-          className="text-xl text-medium-gray max-w-2xl mx-auto mb-16 font-light leading-relaxed"
+          className="body-text text-xl text-medium-gray max-w-2xl mx-auto mb-16"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}

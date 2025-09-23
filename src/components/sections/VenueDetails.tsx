@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { venueData } from '@/data/venues';
 import { MapPin, Phone, Clock, Star } from 'lucide-react';
+import { AdvancedImageGallery } from '@/components/ui/AdvancedImageGallery';
 
 export function VenueDetails() {
   const [selectedImage, setSelectedImage] = useState(0);
