@@ -33,20 +33,8 @@ export function RefinedNavigation() {
         <div className="container mx-auto px-8 py-4">
           <div className="flex items-center justify-between max-w-7xl mx-auto">
             
-            {/* Left: Cigar Aficionado Logo */}
-            <motion.div 
-              className="flex items-center"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src="/images/cigar_aficionado_logo.png"
-                alt="Cigar Aficionado"
-                width={140}
-                height={42}
-                className="h-10 w-auto"
-              />
-            </motion.div>
+            {/* Left: Empty space for balance */}
+            <div className="w-32"></div>
             
             {/* Center: Navigation Links */}
             <div className="hidden lg:flex items-center justify-center space-x-12">
@@ -70,7 +58,7 @@ export function RefinedNavigation() {
                 <AnimatePresence>
                   {isDavidoffDropdownOpen && (
                     <motion.div 
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white/95 backdrop-blur-xl shadow-2xl p-6 min-w-[280px] border border-light-gray/30"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white/95 backdrop-blur-xl shadow-2xl p-6 min-w-[280px] border border-light-gray/30 z-50"
                       initial={{ opacity: 0, y: -10, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -10, scale: 0.95 }}
