@@ -12,46 +12,46 @@ export function BrandComparison() {
         </h2>
         <div className="w-32 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-16"></div>
         
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
           
-          {/* For the Power Player */}
-          <div className="text-center p-8 border border-light-gray hover:border-gold transition-all">
-            <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          {/* For the Executive */}
+          <div className="text-center p-10 border border-light-gray hover:border-gold transition-all h-full flex flex-col">
+            <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-8">
               <Briefcase className="w-8 h-8 text-gold" />
             </div>
-            <h4 className="text-2xl font-thin mb-4">For the Executive</h4>
-            <p className="text-medium-gray mb-6">
+            <h4 className="text-2xl font-thin mb-6 text-charcoal">For the Executive</h4>
+            <p className="text-medium-gray mb-8 leading-relaxed flex-grow">
               When privacy and prestige are paramount
             </p>
-            <p className="font-medium text-charcoal">
+            <p className="font-medium text-charcoal text-lg">
               → Davidoff Madison Avenue
             </p>
           </div>
           
-          {/* For the Socialite */}
-          <div className="text-center p-8 border border-light-gray hover:border-gold transition-all">
-            <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          {/* For the Modernist */}
+          <div className="text-center p-10 border border-light-gray hover:border-gold transition-all h-full flex flex-col">
+            <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-8">
               <Users className="w-8 h-8 text-gold" />
             </div>
-            <h4 className="text-2xl font-thin mb-4">For the Modernist</h4>
-            <p className="text-medium-gray mb-6">
+            <h4 className="text-2xl font-thin mb-6 text-charcoal">For the Modernist</h4>
+            <p className="text-medium-gray mb-8 leading-relaxed flex-grow">
               Where energy meets sophistication
             </p>
-            <p className="font-medium text-charcoal">
+            <p className="font-medium text-charcoal text-lg">
               → Davidoff 6th Avenue
             </p>
           </div>
           
-          {/* For the Traditionalist */}
-          <div className="text-center p-8 border border-light-gray hover:border-gold transition-all">
-            <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-6">
+          {/* For the Purist */}
+          <div className="text-center p-10 border border-light-gray hover:border-gold transition-all h-full flex flex-col">
+            <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-8">
               <Award className="w-8 h-8 text-gold" />
             </div>
-            <h4 className="text-2xl font-thin mb-4">For the Purist</h4>
-            <p className="text-medium-gray mb-6">
+            <h4 className="text-2xl font-thin mb-6 text-charcoal">For the Purist</h4>
+            <p className="text-medium-gray mb-8 leading-relaxed flex-grow">
               Authentic heritage and rare finds
             </p>
-            <p className="font-medium text-charcoal">
+            <p className="font-medium text-charcoal text-lg">
               → Barclay Rex
             </p>
           </div>
