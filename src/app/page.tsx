@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Navigation } from '@/components/ui/Navigation';
+import { RefinedNavigation } from '@/components/ui/RefinedNavigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { VenueShowcase } from '@/components/sections/VenueShowcase';
 import { VenueDetails } from '@/components/sections/VenueDetails';
@@ -26,7 +26,7 @@ export default function Home() {
     <ErrorBoundary>
       <div className="min-h-screen bg-off-white">
         <SkipToMainContent />
-        <Navigation />
+        <RefinedNavigation />
         
         <main id="main-content">
           <ErrorBoundary>

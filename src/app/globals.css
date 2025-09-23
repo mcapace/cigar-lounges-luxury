@@ -179,8 +179,27 @@ body {
   }
 }
 
-/* Enhanced Typography System */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@100;200;300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap');
+/* Premium Typography System with Variable Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+
+/* Advanced Font Loading */
+@font-face {
+  font-family: 'Playfair Display Variable';
+  font-style: normal;
+  font-weight: 300 900;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/playfairdisplay/v36/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKdFvXDYbtXK-F2qO0s.woff2') format('woff2');
+  font-variation-settings: 'wght' 400;
+}
+
+@font-face {
+  font-family: 'Inter Variable';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/inter/v18/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuLyfAZ9hiJ-Ek-_EeA.woff2') format('woff2');
+  font-variation-settings: 'wght' 400;
+}
 
 /* Font Display Optimization */
 .font-display-optimized {
@@ -191,14 +210,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Luxury Typography Classes */
+/* Premium Typography Classes */
 .hero-title {
   font-size: clamp(3.5rem, 8vw, 6rem);
   font-weight: 200;
   line-height: 1.05;
   letter-spacing: -0.03em;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display Variable', 'Playfair Display', serif;
+  font-variation-settings: 'wght' 200;
   font-display: swap;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .hero-subtitle {
@@ -206,7 +229,8 @@ body {
   font-weight: 300;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display Variable', 'Playfair Display', serif;
+  font-variation-settings: 'wght' 300;
   font-style: italic;
 }
 
@@ -214,19 +238,20 @@ body {
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 300;
   margin-bottom: 3rem;
-  font-family: 'Playfair Display', serif;
+  font-family: 'Playfair Display Variable', 'Playfair Display', serif;
+  font-variation-settings: 'wght' 300;
   letter-spacing: -0.02em;
 }
 
 .venue-name {
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
+  font-family: 'Playfair Display Variable', 'Playfair Display', serif;
+  font-variation-settings: 'wght' 400;
   letter-spacing: -0.01em;
 }
 
 .body-text {
-  font-family: 'Inter', sans-serif;
-  font-weight: 300;
+  font-family: 'Inter Variable', 'Inter', sans-serif;
+  font-variation-settings: 'wght' 300;
   line-height: 1.7;
   letter-spacing: 0.01em;
 }
@@ -235,6 +260,101 @@ body {
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   font-style: italic;
+}
+
+/* Advanced Typography Effects */
+.text-reveal {
+  overflow: hidden;
+  position: relative;
+}
+
+.text-reveal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--gold);
+  transform: translateX(-100%);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 1;
+}
+
+.text-reveal:hover::before {
+  transform: translateX(100%);
+}
+
+.text-reveal span {
+  position: relative;
+  z-index: 2;
+}
+
+/* Sophisticated Motion Classes */
+.motion-blur {
+  filter: blur(0px);
+  transition: filter 0.3s ease;
+}
+
+.motion-blur:hover {
+  filter: blur(1px);
+}
+
+.motion-scale {
+  transform: scale(1);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.motion-scale:hover {
+  transform: scale(1.05);
+}
+
+.motion-rotate {
+  transform: rotate(0deg);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.motion-rotate:hover {
+  transform: rotate(2deg);
+}
+
+/* Advanced Parallax Effects */
+.parallax-container {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.parallax-element {
+  transform: translateZ(0);
+  will-change: transform;
+  transition: transform 0.1s ease-out;
+}
+
+.parallax-slow {
+  transform: translateZ(-100px) scale(1.1);
+}
+
+.parallax-medium {
+  transform: translateZ(-50px) scale(1.05);
+}
+
+.parallax-fast {
+  transform: translateZ(0px) scale(1);
+}
+
+/* 3D Transform Effects */
+.transform-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card-3d {
+  transform: rotateX(0deg) rotateY(0deg);
+  transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-3d:hover {
+  transform: rotateX(-5deg) rotateY(5deg);
 }
 
 /* Luxury Button Enhancements */
