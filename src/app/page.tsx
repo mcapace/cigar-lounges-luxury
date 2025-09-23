@@ -40,7 +40,7 @@ export default function Home() {
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-luxury-charcoal">
+      <div className="min-h-screen bg-off-white">
         <SkipToMainContent />
         <Navigation />
         
