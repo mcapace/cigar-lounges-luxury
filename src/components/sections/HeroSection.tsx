@@ -77,13 +77,30 @@ export function HeroSection() {
         <AdvancedMotion variant="fade" delay={1.2} className="mb-16">
           <p className="body-text text-xl text-medium-gray max-w-3xl mx-auto leading-relaxed">
             An exclusive partnership showcasing New York's most storied cigar establishments. 
-            Discover the heritage, craftsmanship, and unique experiences that define 
-            each of these celebrated venues.
+            From Davidoff's Swiss excellence across two Manhattan locations to 
+            Barclay Rex's 113-year Wall Street legacy.
           </p>
         </AdvancedMotion>
         
+        {/* Show all three partner logos */}
+        <AdvancedMotion variant="fade" delay={1.4} className="mb-12">
+          <div className="flex items-center justify-center gap-12">
+            <img 
+              src="/images/Davidoff Logo.png" 
+              alt="Davidoff"
+              className="h-10 object-contain"
+            />
+            <div className="w-px h-10 bg-gray-300"></div>
+            <img 
+              src="/images/Barclay Rex logo.png" 
+              alt="Barclay Rex"
+              className="h-10 object-contain"
+            />
+          </div>
+        </AdvancedMotion>
+        
         {/* Enhanced CTAs */}
-        <AdvancedMotion variant="slide" direction="up" distance={40} delay={1.4}>
+        <AdvancedMotion variant="slide" direction="up" distance={40} delay={1.6}>
           <div className="flex gap-8 justify-center">
             <MagneticHover strength={0.2}>
               <motion.button 

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { venueData } from '@/data/venues';
 import { MapPin, Phone, Clock, Star, ExternalLink } from 'lucide-react';
-import { AdvancedImageGallery } from '@/components/ui/AdvancedImageGallery';
+import { SimpleImageGallery } from '@/components/ui/SimpleImageGallery';
 
 export function VenueDetails() {
   const davidoffMadison = venueData.brands[0].locations[0];
@@ -18,13 +18,8 @@ export function VenueDetails() {
         <div className="container mx-auto px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             
-            {/* Image Gallery */}
-            <AdvancedImageGallery 
-              folder="Davidoff Madison"
-              venueName="Davidoff Madison Avenue"
-              images={davidoffMadison.images.gallery}
-              heroImage={davidoffMadison.images.hero}
-            />
+                {/* Image Gallery */}
+                <SimpleImageGallery venue="davidoff-madison" />
             
             {/* Content */}
             <div className="space-y-6">
@@ -168,12 +163,7 @@ export function VenueDetails() {
             </div>
 
             {/* Image Gallery */}
-            <AdvancedImageGallery 
-              folder="Davidoff Sixth Ave"
-              venueName="Davidoff 6th Avenue"
-              images={davidoffSixth.images.gallery}
-              heroImage={davidoffSixth.images.hero}
-            />
+            <SimpleImageGallery venue="davidoff-sixth" />
           </div>
         </div>
       </section>
@@ -188,13 +178,8 @@ export function VenueDetails() {
         <div className="container mx-auto px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             
-            {/* Image Gallery */}
-            <AdvancedImageGallery 
-              folder="Barclay Rex"
-              venueName="Barclay Rex"
-              images={barclayRex.images.gallery}
-              heroImage={barclayRex.images.hero}
-            />
+                {/* Image Gallery */}
+                <SimpleImageGallery venue="barclay-rex" />
             
             {/* Content */}
             <div className="space-y-6">

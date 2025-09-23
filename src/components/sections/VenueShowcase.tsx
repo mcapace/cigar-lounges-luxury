@@ -3,88 +3,91 @@
 import { motion } from 'framer-motion';
 import { MapPin, Award } from 'lucide-react';
 import { venueData } from '@/data/venues';
-import { useVenueRotation } from '@/hooks/useVenueRotation';
 
 export function VenueShowcase() {
-  const venueOrder = useVenueRotation();
-  
-  const getVenueData = (venueId: string) => {
-    const allVenues = venueData.brands.flatMap(brand => brand.locations);
-    return allVenues.find(venue => venue.id === venueId);
-  };
-
   const davidoffBrand = venueData.brands.find(b => b.id === 'davidoff');
   const barclayRexBrand = venueData.brands.find(b => b.id === 'barclay-rex');
+  
   return (
-    <section className="py-24 bg-white">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-8">
+        <h2 className="text-4xl font-normal text-center mb-12 text-charcoal">
+          Select Your Experience
+        </h2>
         
-        {/* Section header with space */}
-        <div className="text-center mb-20">
-          <h2 className="section-title text-charcoal">
-            Select Your Experience
-          </h2>
-          <div className="w-32 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
-        </div>
-        
-        {/* Venue Cards - Dynamic based on rotation */}
-        <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
-          {venueOrder.map((venueId, index) => {
-            const venue = getVenueData(venueId);
-            if (!venue) return null;
-            
-            const brand = venueData.brands.find(b => b.locations.some(l => l.id === venueId));
-            
-            return (
-              <motion.div 
-                key={venueId}
-                className="bg-white border border-light-gray p-8 hover:shadow-xl transition-all hover-lift glass-morphism h-full flex flex-col"
-                initial={{ opacity: 0, y: 50, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
-                whileHover={{ y: -8, scale: 1.02 }}
-              >
-                {/* Header Section */}
-                <div className="mb-6">
-                  <div className="mb-3">
-                    <span className="text-lg font-bold text-charcoal">{brand?.name}</span>
-                  </div>
-                  <h3 className="venue-name text-2xl mb-3">{venue.name}</h3>
-                  <p className="body-text text-medium-gray leading-relaxed text-sm">
-                    {venue.description.substring(0, 120)}...
-                  </p>
-                </div>
-                
-                {/* Features Section */}
-                <div className="space-y-4 mb-8 flex-grow">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-4 h-4 text-gold mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-charcoal text-sm">{venue.neighborhood}</p>
-                      <p className="text-xs text-medium-gray">{venue.address}</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3">
-                    <Award className="w-4 h-4 text-gold mt-1 flex-shrink-0" />
-                    <div>
-                      <p className="font-medium text-charcoal text-sm">{venue.tagline}</p>
-                      <p className="text-xs text-medium-gray">{venue.phone}</p>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Button Section */}
-                <button 
-                  className="w-full py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition luxury-button font-medium text-sm"
-                  onClick={() => document.getElementById(venueId)?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Explore {venue.name}
-                </button>
-              </motion.div>
-            );
-          })}
+        {/* Grid with proper cards for all venues */}
+        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          
+          {/* Davidoff Card (covers both locations) */}
+          <motion.div 
+            className="bg-white border border-gray-200 p-8 hover:shadow-lg transition"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <img 
+              src="/images/Davidoff Logo.png" 
+              alt="Davidoff"
+              className="h-10 mb-6 object-contain"
+            />
+            <h3 className="text-2xl font-normal mb-4 text-charcoal">Davidoff of Geneva</h3>
+            <p className="text-gray-600 mb-6 body-text">
+              Experience Swiss excellence at two distinguished Manhattan locations
+            </p>
+            <div className="space-y-4 mb-6">
+              <div className="pb-4 border-b border-gray-100">
+                <h4 className="font-medium mb-2 text-charcoal">Madison Avenue</h4>
+                <p className="text-sm text-gray-600">The Flagship Experience</p>
+              </div>
+              <div>
+                <h4 className="font-medium mb-2 text-charcoal">6th Avenue</h4>
+                <p className="text-sm text-gray-600">Downtown Sophistication</p>
+              </div>
+            </div>
+            <a 
+              href="https://davidoff.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold hover:underline"
+            >
+              Explore Davidoff Locations →
+            </a>
+          </motion.div>
+          
+          {/* Barclay Rex Card */}
+          <motion.div 
+            className="bg-white border border-gray-200 p-8 hover:shadow-lg transition"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <img 
+              src="/images/Barclay Rex logo.png" 
+              alt="Barclay Rex"
+              className="h-10 mb-6 object-contain"
+            />
+            <h3 className="text-2xl font-normal mb-4 text-charcoal">Barclay Rex</h3>
+            <p className="text-gray-600 mb-6 body-text">
+              New York's original tobacconist, serving Wall Street since 1910
+            </p>
+            <div className="mb-6">
+              <div className="pb-4">
+                <h4 className="font-medium mb-2 text-charcoal">Wall Street</h4>
+                <p className="text-sm text-gray-600">113 Years of Tradition</p>
+                <p className="text-sm text-gray-600 mt-2">Family-owned heritage</p>
+              </div>
+            </div>
+            <a 
+              href="https://barclayrex.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gold hover:underline"
+            >
+              Explore Barclay Rex →
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>
