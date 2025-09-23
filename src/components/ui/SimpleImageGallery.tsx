@@ -49,7 +49,7 @@ export function SimpleImageGallery({ venue }: SimpleImageGalleryProps) {
       </div>
       
       {/* Thumbnails */}
-      <div className="flex gap-2 overflow-x-auto">
+      <div className="flex gap-2 justify-center overflow-x-auto">
         {venueImages.map((img, idx) => (
           <button
             key={idx}

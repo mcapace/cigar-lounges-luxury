@@ -68,29 +68,30 @@ export function DavidoffHeritage() {
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-16">
           {/* Madison Avenue */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
+            className="flex flex-col"
           >
             <div className="mb-6">
-              <h3 className="text-2xl font-light mb-2 text-charcoal">Madison Avenue</h3>
-              <p className="text-gold text-sm uppercase tracking-wider">The Flagship Experience</p>
+              <h3 className="text-2xl font-normal mb-2 text-charcoal">Madison Avenue</h3>
+              <p className="text-gold text-sm uppercase tracking-wider font-medium">The Flagship Experience</p>
             </div>
             
-            <div className="prose prose-lg text-medium-gray body-text">
-              <p className="mb-4">
+            <div className="prose prose-lg text-medium-gray body-text flex-grow">
+              <p className="mb-6 text-charcoal">
                 The Madison Avenue flagship stands as North America's premier 
                 Davidoff destination. Here, among Manhattan's most prestigious 
                 addresses, the full breadth of Davidoff excellence is on display.
               </p>
               
-              <div className="bg-cream p-6 my-6">
-                <h4 className="font-medium mb-3 text-charcoal">Exclusive to Madison:</h4>
-                <ul className="space-y-2 text-sm body-text">
+              <div className="bg-cream p-6 my-6 rounded">
+                <h4 className="font-medium mb-4 text-charcoal">Exclusive to Madison:</h4>
+                <ul className="space-y-2 text-sm body-text text-charcoal">
                   <li>• The Davidoff Vault - Limited editions and rare releases</li>
                   <li>• Private humidor locker program</li>
                   <li>• Personal shopping with certified ambassadors</li>
@@ -99,7 +100,7 @@ export function DavidoffHeritage() {
                 </ul>
               </div>
               
-              <p className="text-sm italic accent-text">
+              <p className="text-sm italic accent-text mt-6">
                 "Where every detail reflects 100+ years of Swiss precision"
               </p>
             </div>
@@ -111,22 +112,23 @@ export function DavidoffHeritage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
+            className="flex flex-col"
           >
             <div className="mb-6">
-              <h3 className="text-2xl font-light mb-2 text-charcoal">6th Avenue</h3>
-              <p className="text-gold text-sm uppercase tracking-wider">Downtown Sophistication</p>
+              <h3 className="text-2xl font-normal mb-2 text-charcoal">6th Avenue</h3>
+              <p className="text-gold text-sm uppercase tracking-wider font-medium">Downtown Sophistication</p>
             </div>
             
-            <div className="prose prose-lg text-medium-gray body-text">
-              <p className="mb-4">
+            <div className="prose prose-lg text-medium-gray body-text flex-grow">
+              <p className="mb-6 text-charcoal">
                 The 6th Avenue location brings Davidoff's heritage into conversation 
                 with contemporary New York. This modern sanctuary serves Midtown's 
                 dynamic community of professionals and connoisseurs.
               </p>
               
-              <div className="bg-cream p-6 my-6">
-                <h4 className="font-medium mb-3 text-charcoal">Unique to 6th Avenue:</h4>
-                <ul className="space-y-2 text-sm body-text">
+              <div className="bg-cream p-6 my-6 rounded">
+                <h4 className="font-medium mb-4 text-charcoal">Unique to 6th Avenue:</h4>
+                <ul className="space-y-2 text-sm body-text text-charcoal">
                   <li>• Contemporary lounge atmosphere</li>
                   <li>• Extended evening hours</li>
                   <li>• Regular tasting events</li>
@@ -135,7 +137,7 @@ export function DavidoffHeritage() {
                 </ul>
               </div>
               
-              <p className="text-sm italic accent-text">
+              <p className="text-sm italic accent-text mt-6">
                 "Where Swiss tradition meets Manhattan energy"
               </p>
             </div>

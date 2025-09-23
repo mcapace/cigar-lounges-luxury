@@ -88,13 +88,13 @@ export function HeroSection() {
             <img 
               src="/images/Davidoff Logo.png" 
               alt="Davidoff"
-              className="h-10 object-contain"
+              className="h-12 object-contain"
             />
-            <div className="w-px h-10 bg-gray-300"></div>
+            <div className="w-px h-12 bg-gray-300"></div>
             <img 
               src="/images/Barclay Rex logo.png" 
               alt="Barclay Rex"
-              className="h-10 object-contain"
+              className="h-14 object-contain"
             />
           </div>
         </AdvancedMotion>

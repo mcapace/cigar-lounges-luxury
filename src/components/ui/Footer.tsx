@@ -10,7 +10,13 @@ export function Footer() {
           
           {/* Cigar Aficionado Column */}
           <div>
-            <h4 className="text-lg font-medium mb-4">Cigar Aficionado</h4>
+            <Image
+              src="/images/cigar_aficionado_logo.png"
+              alt="Cigar Aficionado"
+              width={120}
+              height={36}
+              className="h-8 mb-4"
+            />
             <p className="text-sm text-gray-400">
               Curating exceptional cigar experiences since 1992
             </p>
@@ -18,7 +24,13 @@ export function Footer() {
           
           {/* Davidoff Column */}
           <div>
-            <h4 className="text-lg font-medium mb-4">Davidoff</h4>
+            <Image
+              src="/images/Davidoff Logo.png"
+              alt="Davidoff"
+              width={100}
+              height={30}
+              className="h-6 mb-4"
+            />
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <a href="https://davidoff.com" className="hover:text-gold">
@@ -36,7 +48,13 @@ export function Footer() {
           
           {/* Barclay Rex Column */}
           <div>
-            <h4 className="text-lg font-medium mb-4">Barclay Rex</h4>
+            <Image
+              src="/images/Barclay Rex logo.png"
+              alt="Barclay Rex"
+              width={100}
+              height={30}
+              className="h-6 mb-4"
+            />
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
                 <a href="https://barclayrex.com" className="hover:text-gold">

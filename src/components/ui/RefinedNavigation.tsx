@@ -52,7 +52,7 @@ export function RefinedNavigation() {
             <div className="hidden lg:flex items-center space-x-12">
               <div className="relative group">
                 <motion.button 
-                  className="flex items-center gap-2 text-charcoal hover:text-gold transition-all duration-300 font-medium text-base tracking-wide"
+                  className="flex items-center gap-2 text-charcoal hover:text-gold transition-all duration-300 font-normal text-lg tracking-wide"
                   onMouseEnter={() => setIsDavidoffDropdownOpen(true)}
                   onMouseLeave={() => setIsDavidoffDropdownOpen(false)}
                   whileHover={{ y: -2 }}
@@ -101,21 +101,34 @@ export function RefinedNavigation() {
               
               <motion.a 
                 href="#barclay-rex" 
-                className="text-charcoal hover:text-gold transition-all duration-300 font-medium text-base tracking-wide"
+                className="text-charcoal hover:text-gold transition-all duration-300 font-normal text-lg tracking-wide"
                 whileHover={{ y: -2 }}
               >
                 Barclay Rex
               </motion.a>
             </div>
             
-            {/* Right: Refined CTA */}
-            <motion.button 
-              className="px-6 py-3 text-sm font-medium text-charcoal border border-charcoal/30 hover:bg-charcoal hover:text-white transition-all duration-300 backdrop-blur-sm"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Reserve
-            </motion.button>
+            {/* Right: Visit Links */}
+            <div className="hidden lg:flex items-center space-x-4">
+              <motion.a 
+                href="https://davidoff.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 text-sm font-medium text-charcoal hover:text-gold transition-all duration-300"
+                whileHover={{ y: -2 }}
+              >
+                Visit Davidoff
+              </motion.a>
+              <motion.a 
+                href="https://barclayrex.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-4 py-2 text-sm font-medium text-charcoal hover:text-gold transition-all duration-300"
+                whileHover={{ y: -2 }}
+              >
+                Visit Barclay Rex
+              </motion.a>
+            </div>
           </div>
         </div>
       </motion.nav>

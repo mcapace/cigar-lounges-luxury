@@ -49,9 +49,9 @@ export function VenueShowcase() {
               href="https://davidoff.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold hover:underline"
+              className="inline-block px-6 py-3 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium"
             >
-              Explore Davidoff Locations →
+              Visit Davidoff Website →
             </a>
           </motion.div>
           
@@ -83,9 +83,9 @@ export function VenueShowcase() {
               href="https://barclayrex.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gold hover:underline"
+              className="inline-block px-6 py-3 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium"
             >
-              Explore Barclay Rex →
+              Visit Barclay Rex Website →
             </a>
           </motion.div>
         </div>
