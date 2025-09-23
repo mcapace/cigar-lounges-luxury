@@ -11,7 +11,7 @@ export function HeroSection() {
   return (
         <section className="min-h-[90vh] bg-gradient-to-b from-white via-cream to-off-white flex items-center relative overflow-hidden">
       {/* Enhanced Parallax Background Elements */}
-      <div className="absolute inset-0 opacity-5 -z-10">
+      <div className="absolute inset-0 opacity-3 -z-20">
         <div 
           ref={parallaxRef}
           style={{ transform }}
@@ -88,23 +88,23 @@ export function HeroSection() {
             <img 
               src="/images/Davidoff Logo.png" 
               alt="Davidoff"
-              className="h-20 object-contain"
+              className="h-12 object-contain"
             />
-            <div className="w-px h-20 bg-gray-300"></div>
+            <div className="w-px h-12 bg-gray-300"></div>
             <img 
               src="/images/Barclay Rex logo.png" 
               alt="Barclay Rex"
-              className="h-24 object-contain"
+              className="h-14 object-contain"
             />
           </div>
         </AdvancedMotion>
         
         {/* Enhanced CTAs */}
         <AdvancedMotion variant="slide" direction="up" distance={40} delay={1.6}>
-          <div className="flex gap-6 justify-center relative z-20">
+          <div className="flex gap-6 justify-center relative z-50">
             <MagneticHover strength={0.2}>
               <motion.button 
-                className="px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium tracking-wide relative z-20"
+                className="px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium tracking-wide relative z-50"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -113,7 +113,7 @@ export function HeroSection() {
             </MagneticHover>
             <MagneticHover strength={0.2}>
               <motion.button 
-                className="px-8 py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-all duration-300 font-medium tracking-wide relative z-20"
+                className="px-8 py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-all duration-300 font-medium tracking-wide relative z-50"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
