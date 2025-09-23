@@ -9,8 +9,8 @@ export function HeroSection() {
   const { ref: parallaxRef, transform } = useParallaxScroll({ speed: 0.3, direction: 'up' });
 
   return (
-    <section className="min-h-[80vh] bg-gradient-to-b from-white via-cream to-off-white flex items-center relative overflow-hidden">
-      {/* Parallax Background Elements */}
+        <section className="min-h-[90vh] bg-gradient-to-b from-white via-cream to-off-white flex items-center relative overflow-hidden">
+      {/* Enhanced Parallax Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div 
           ref={parallaxRef}
@@ -20,6 +20,14 @@ export function HeroSection() {
         <div 
           className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-charcoal rounded-full blur-3xl"
           style={{ transform: 'translateY(-20px)' }}
+        />
+        <div 
+          className="absolute top-1/2 right-1/3 w-64 h-64 bg-gold/30 rounded-full blur-2xl"
+          style={{ transform: 'translateY(30px)' }}
+        />
+        <div 
+          className="absolute bottom-1/3 left-1/3 w-72 h-72 bg-charcoal/20 rounded-full blur-3xl"
+          style={{ transform: 'translateY(-40px)' }}
         />
       </div>
 
@@ -43,27 +51,27 @@ export function HeroSection() {
           </MagneticHover>
         </AdvancedMotion>
         
-        {/* Large, elegant headline with text reveal */}
-        <div className="mb-12">
-          <AdvancedMotion variant="slide" direction="up" distance={80} delay={0.4}>
-            <h1 className="hero-title text-charcoal mb-6 font-display-optimized">
-              <TextReveal delay={0.6}>
-                Three Legendary
-              </TextReveal>
-            </h1>
-          </AdvancedMotion>
-          
-          <AdvancedMotion variant="scale" delay={0.8}>
-            <motion.span 
-              className="hero-subtitle block text-gold gradient-text"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-            >
-              Destinations
-            </motion.span>
-          </AdvancedMotion>
-        </div>
+            {/* Large, elegant headline with text reveal */}
+            <div className="mb-16">
+              <AdvancedMotion variant="slide" direction="up" distance={80} delay={0.4}>
+                <h1 className="hero-title text-charcoal mb-8 font-display-optimized leading-tight">
+                  <TextReveal delay={0.6}>
+                    Three Legendary
+                  </TextReveal>
+                </h1>
+              </AdvancedMotion>
+              
+              <AdvancedMotion variant="scale" delay={0.8}>
+                <motion.span 
+                  className="hero-subtitle block text-gold gradient-text leading-tight"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, delay: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+                >
+                  Destinations
+                </motion.span>
+              </AdvancedMotion>
+            </div>
         
         {/* Refined subtext */}
         <AdvancedMotion variant="fade" delay={1.2} className="mb-16">

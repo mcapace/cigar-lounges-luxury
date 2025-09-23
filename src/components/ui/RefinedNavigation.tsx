@@ -34,11 +34,26 @@ export function RefinedNavigation() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
-        <div className="container mx-auto px-8 py-6">
-          <div className="flex flex-col items-center max-w-7xl mx-auto">
+        <div className="container mx-auto px-8 py-4">
+          <div className="flex items-center justify-between max-w-7xl mx-auto">
             
-            {/* Top: Navigation Links */}
-            <div className="hidden lg:flex items-center space-x-12 mb-4">
+            {/* Left: Cigar Aficionado Logo */}
+            <motion.div 
+              className="flex items-center"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Image
+                src="/images/cigar_aficionado_logo.png"
+                alt="Cigar Aficionado"
+                width={140}
+                height={42}
+                className="h-10 w-auto"
+              />
+            </motion.div>
+            
+            {/* Center: Navigation Links */}
+            <div className="hidden lg:flex items-center space-x-12">
               <div className="relative group">
                 <motion.button 
                   className="flex items-center gap-2 text-charcoal hover:text-gold transition-all duration-300 font-medium text-base tracking-wide"
@@ -59,7 +74,7 @@ export function RefinedNavigation() {
                 <AnimatePresence>
                   {isDavidoffDropdownOpen && (
                     <motion.div 
-                      className="absolute top-full left-0 mt-4 bg-white/95 backdrop-blur-xl shadow-2xl p-6 min-w-[280px] border border-light-gray/30"
+                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white/95 backdrop-blur-xl shadow-2xl p-6 min-w-[280px] border border-light-gray/30"
                       initial={{ opacity: 0, y: -10, scale: 0.95 }}
                       animate={{ opacity: 1, y: 0, scale: 1 }}
                       exit={{ opacity: 0, y: -10, scale: 0.95 }}
@@ -97,22 +112,7 @@ export function RefinedNavigation() {
               </motion.a>
             </div>
             
-            {/* Center: Cigar Aficionado Logo */}
-            <motion.div 
-              className="flex items-center mb-4"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src="/images/cigar_aficionado_logo.png"
-                alt="Cigar Aficionado"
-                width={160}
-                height={48}
-                className="h-12 w-auto"
-              />
-            </motion.div>
-            
-            {/* Bottom: Refined CTA */}
+            {/* Right: Refined CTA */}
             <motion.button 
               className="px-6 py-3 text-sm font-medium text-charcoal border border-charcoal/30 hover:bg-charcoal hover:text-white transition-all duration-300 backdrop-blur-sm"
               whileHover={{ scale: 1.05, y: -2 }}

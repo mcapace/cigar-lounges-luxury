@@ -25,10 +25,11 @@ export function VenueShowcase() {
           {/* Davidoff Card (spans both locations) */}
           <motion.div 
             className="bg-white border border-light-gray p-10 hover:shadow-xl transition-all hover-lift glass-morphism h-full flex flex-col"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
+            whileHover={{ y: -8, scale: 1.02 }}
           >
             {/* Header Section */}
             <div className="mb-8">
@@ -71,10 +72,11 @@ export function VenueShowcase() {
           {/* Barclay Rex Card */}
           <motion.div 
             className="bg-white border border-light-gray p-10 hover:shadow-xl transition-all hover-lift glass-morphism h-full flex flex-col"
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 50, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: [0.25, 0.46, 0.45, 0.94] }}
+            whileHover={{ y: -8, scale: 1.02 }}
           >
             {/* Header Section */}
             <div className="mb-8">

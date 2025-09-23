@@ -15,7 +15,14 @@ export function BrandComparison() {
         <div className="grid md:grid-cols-3 gap-12 max-w-7xl mx-auto">
           
           {/* For the Executive */}
-          <div className="text-center p-10 border border-light-gray hover:border-gold transition-all h-full flex flex-col">
+          <motion.div 
+            className="text-center p-10 border border-light-gray hover:border-gold transition-all h-full flex flex-col"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            whileHover={{ y: -5, scale: 1.02 }}
+          >
             <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-8">
               <Briefcase className="w-8 h-8 text-gold" />
             </div>
@@ -26,10 +33,17 @@ export function BrandComparison() {
             <p className="font-medium text-charcoal text-lg">
               → Davidoff Madison Avenue
             </p>
-          </div>
+          </motion.div>
           
           {/* For the Modernist */}
-          <div className="text-center p-10 border border-light-gray hover:border-gold transition-all h-full flex flex-col">
+          <motion.div 
+            className="text-center p-10 border border-light-gray hover:border-gold transition-all h-full flex flex-col"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            whileHover={{ y: -5, scale: 1.02 }}
+          >
             <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-8">
               <Users className="w-8 h-8 text-gold" />
             </div>
@@ -40,10 +54,17 @@ export function BrandComparison() {
             <p className="font-medium text-charcoal text-lg">
               → Davidoff 6th Avenue
             </p>
-          </div>
+          </motion.div>
           
           {/* For the Purist */}
-          <div className="text-center p-10 border border-light-gray hover:border-gold transition-all h-full flex flex-col">
+          <motion.div 
+            className="text-center p-10 border border-light-gray hover:border-gold transition-all h-full flex flex-col"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            whileHover={{ y: -5, scale: 1.02 }}
+          >
             <div className="w-16 h-16 bg-gold/10 rounded-full flex items-center justify-center mx-auto mb-8">
               <Award className="w-8 h-8 text-gold" />
             </div>
@@ -54,7 +75,7 @@ export function BrandComparison() {
             <p className="font-medium text-charcoal text-lg">
               → Barclay Rex
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
