@@ -1,4 +1,4 @@
-# 🚬 Luxury Cigar Lounges
+# 🚬 Luxury Cigar Lounges Premium
 
 A premium Next.js 14 application showcasing two exclusive luxury cigar lounges with cutting-edge web technologies, immersive 3D animations, and a sophisticated user experience.
 
