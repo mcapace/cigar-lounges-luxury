@@ -12,7 +12,6 @@ import { Footer } from '@/components/ui/Footer';
 import { ErrorBoundary, VenueErrorBoundary } from '@/components/ui/ErrorBoundary';
 import { ResponsiveTest } from '@/components/ui/ResponsiveTest';
 import { PerformanceMonitor } from '@/components/ui/PerformanceMonitor';
-import { LuxuryCursor } from '@/components/ui/LuxuryCursor';
 import { AccessibilityToolbar, SkipToMainContent, KeyboardNavigation, HighContrastStyles } from '@/components/ui/AccessibilityFeatures';
 import { LuxuryPageLoader } from '@/components/ui/LuxuryLoadingStates';
 import { ContentValidator } from '@/components/ui/ContentValidator';
@@ -70,7 +69,6 @@ export default function Home() {
         <ScrollProgress />
         
         {/* Luxury features */}
-        <LuxuryCursor />
         <AccessibilityToolbar />
         <KeyboardNavigation />
         <HighContrastStyles />

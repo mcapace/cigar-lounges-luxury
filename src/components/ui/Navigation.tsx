@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Menu, X } from 'lucide-react';
+import Image from 'next/image';
 
 export function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -35,10 +36,16 @@ export function Navigation() {
       >
         <div className="container mx-auto px-8 py-6 flex items-center justify-between">
           
-          {/* Left: CA Logo */}
-          <div className="flex items-center">
-            <span className="text-xl font-bold text-charcoal">Cigar Aficionado</span>
-          </div>
+              {/* Left: CA Logo */}
+              <div className="flex items-center">
+                <Image
+                  src="/images/cigar_aficionado_logo.png"
+                  alt="Cigar Aficionado"
+                  width={120}
+                  height={36}
+                  className="h-8 w-auto"
+                />
+              </div>
           
           {/* Center: Clean venue navigation */}
           <div className="flex items-center gap-12">
@@ -75,10 +82,10 @@ export function Navigation() {
             </a>
           </div>
           
-          {/* Right: Single CTA */}
-          <button className="btn-luxury-premium">
-            Reserve Experience
-          </button>
+              {/* Right: Single CTA */}
+              <button className="px-4 py-2 text-sm font-medium text-charcoal border border-charcoal hover:bg-charcoal hover:text-white transition-all duration-300">
+                Reserve
+              </button>
         </div>
       </motion.nav>
 
@@ -135,15 +142,15 @@ export function Navigation() {
                   </a>
                 </div>
 
-                {/* Reserve CTA */}
-                <motion.button
-                  className="btn-luxury-premium px-8 py-4"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Reserve Experience
-                </motion.button>
+                    {/* Reserve CTA */}
+                    <motion.button
+                      className="px-6 py-3 text-sm font-medium text-charcoal border border-charcoal hover:bg-charcoal hover:text-white transition-all duration-300"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                    >
+                      Reserve
+                    </motion.button>
               </div>
             </motion.div>
           </motion.div>
