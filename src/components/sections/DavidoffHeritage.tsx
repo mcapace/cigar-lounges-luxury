@@ -82,14 +82,14 @@ export function DavidoffHeritage() {
               <p className="text-gold text-sm uppercase tracking-wider font-medium">The Flagship Experience</p>
             </div>
             
-            <div className="prose prose-lg text-medium-gray body-text flex-grow">
+            <div className="prose prose-lg text-medium-gray body-text flex-grow flex flex-col">
               <p className="mb-6 text-charcoal">
                 The Madison Avenue flagship stands as North America's premier 
                 Davidoff destination. Here, among Manhattan's most prestigious 
                 addresses, the full breadth of Davidoff excellence is on display.
               </p>
               
-              <div className="bg-cream p-6 my-6 rounded">
+              <div className="bg-cream p-6 my-6 rounded flex-grow">
                 <h4 className="font-medium mb-4 text-charcoal">Exclusive to Madison:</h4>
                 <ul className="space-y-2 text-sm body-text text-charcoal">
                   <li>• The Davidoff Vault - Limited editions and rare releases</li>
@@ -119,14 +119,14 @@ export function DavidoffHeritage() {
               <p className="text-gold text-sm uppercase tracking-wider font-medium">Downtown Sophistication</p>
             </div>
             
-            <div className="prose prose-lg text-medium-gray body-text flex-grow">
+            <div className="prose prose-lg text-medium-gray body-text flex-grow flex flex-col">
               <p className="mb-6 text-charcoal">
                 The 6th Avenue location brings Davidoff's heritage into conversation 
                 with contemporary New York. This modern sanctuary serves Midtown's 
                 dynamic community of professionals and connoisseurs.
               </p>
               
-              <div className="bg-cream p-6 my-6 rounded">
+              <div className="bg-cream p-6 my-6 rounded flex-grow">
                 <h4 className="font-medium mb-4 text-charcoal">Unique to 6th Avenue:</h4>
                 <ul className="space-y-2 text-sm body-text text-charcoal">
                   <li>• Contemporary lounge atmosphere</li>
