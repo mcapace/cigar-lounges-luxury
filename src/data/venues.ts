@@ -17,6 +17,7 @@ export interface VenueLocation {
   tagline: string;
   description: string;
   address: string;
+  website: string;
   neighborhood: string;
   phone: string;
   email?: string;
