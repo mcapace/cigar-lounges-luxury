@@ -11,7 +11,7 @@ export function HeroSection() {
   return (
         <section className="min-h-[90vh] bg-gradient-to-b from-white via-cream to-off-white flex items-center relative overflow-hidden">
       {/* Enhanced Parallax Background Elements */}
-      <div className="absolute inset-0 opacity-5">
+      <div className="absolute inset-0 opacity-5 -z-10">
         <div 
           ref={parallaxRef}
           style={{ transform }}
@@ -101,10 +101,10 @@ export function HeroSection() {
         
         {/* Enhanced CTAs */}
         <AdvancedMotion variant="slide" direction="up" distance={40} delay={1.6}>
-          <div className="flex gap-6 justify-center">
+          <div className="flex gap-6 justify-center relative z-20">
             <MagneticHover strength={0.2}>
               <motion.button 
-                className="px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium tracking-wide"
+                className="px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium tracking-wide relative z-20"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -113,7 +113,7 @@ export function HeroSection() {
             </MagneticHover>
             <MagneticHover strength={0.2}>
               <motion.button 
-                className="px-8 py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-all duration-300 font-medium tracking-wide"
+                className="px-8 py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-all duration-300 font-medium tracking-wide relative z-20"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
