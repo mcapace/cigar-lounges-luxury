@@ -22,12 +22,12 @@ export function VenueDetails() {
             
             {/* Image Gallery */}
             <div className="space-y-4">
-              <div className="relative h-[500px]">
+              <div className="relative h-[600px] gallery-container image-container">
                 <Image
                   src={davidoffMadison.images.hero}
                   alt="Davidoff Madison Avenue"
                   fill
-                  className="object-cover"
+                  className="object-cover gallery-image"
                   priority
                 />
               </div>
@@ -105,13 +105,18 @@ export function VenueDetails() {
                 </div>
               </div>
               
-              <button className="w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all">
+              <button className="w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button">
                 Reserve Your Visit to Madison
               </button>
             </div>
           </div>
         </div>
       </section>
+
+      {/* Visual Separator */}
+      <div className="py-16 flex justify-center">
+        <div className="w-32 h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+      </div>
 
       {/* DAVIDOFF 6TH AVENUE */}
       <section id="davidoff-sixth" className="py-20 bg-cream">
@@ -171,19 +176,19 @@ export function VenueDetails() {
                 </div>
               </div>
               
-              <button className="w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all">
+              <button className="w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button">
                 Reserve Your Visit to 6th Avenue
               </button>
             </div>
 
             {/* Image Gallery */}
             <div className="space-y-4">
-              <div className="relative h-[500px]">
+              <div className="relative h-[600px] gallery-container image-container">
                 <Image
                   src={davidoffSixth.images.hero}
                   alt="Davidoff 6th Avenue"
                   fill
-                  className="object-cover"
+                  className="object-cover gallery-image"
                   priority
                 />
               </div>
@@ -211,6 +216,11 @@ export function VenueDetails() {
         </div>
       </section>
 
+      {/* Visual Separator */}
+      <div className="py-16 flex justify-center">
+        <div className="w-32 h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
+      </div>
+
       {/* BARCLAY REX */}
       <section id="barclay-rex" className="py-20 bg-white">
         <div className="container mx-auto px-8">
@@ -218,12 +228,12 @@ export function VenueDetails() {
             
             {/* Image Gallery */}
             <div className="space-y-4">
-              <div className="relative h-[500px]">
+              <div className="relative h-[600px] gallery-container image-container">
                 <Image
                   src={barclayRex.images.hero}
                   alt="Barclay Rex"
                   fill
-                  className="object-cover"
+                  className="object-cover gallery-image"
                   priority
                 />
               </div>
@@ -311,7 +321,7 @@ export function VenueDetails() {
                 </div>
               </div>
               
-              <button className="w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all">
+              <button className="w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button">
                 Reserve Your Visit to Barclay Rex
               </button>
             </div>

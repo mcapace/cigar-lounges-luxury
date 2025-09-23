@@ -13,10 +13,10 @@ export function VenueShowcase() {
         
         {/* Section header with space */}
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-thin text-charcoal mb-4">
+          <h2 className="section-title text-charcoal">
             Select Your Experience
           </h2>
-          <div className="w-24 h-px bg-gold mx-auto"></div>
+          <div className="w-32 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto"></div>
         </div>
         
         {/* Venue Cards - More spacing, cleaner design */}
@@ -27,7 +27,7 @@ export function VenueShowcase() {
             <div className="mb-6">
               <span className="text-2xl font-bold text-charcoal">Davidoff</span>
             </div>
-            <h3 className="text-3xl font-thin mb-4">Davidoff of Geneva</h3>
+            <h3 className="venue-name text-3xl mb-4">Davidoff of Geneva</h3>
             <p className="text-medium-gray mb-6 leading-relaxed">
               Experience Swiss precision at two distinguished Manhattan locations
             </p>
@@ -48,7 +48,7 @@ export function VenueShowcase() {
               </div>
             </div>
             <button 
-              className="w-full py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition"
+              className="w-full py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition luxury-button"
               onClick={() => document.getElementById('davidoff-madison')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Davidoff
@@ -60,7 +60,7 @@ export function VenueShowcase() {
             <div className="mb-6">
               <span className="text-2xl font-bold text-charcoal">Barclay Rex</span>
             </div>
-            <h3 className="text-3xl font-thin mb-4">Barclay Rex</h3>
+            <h3 className="venue-name text-3xl mb-4">Barclay Rex</h3>
             <p className="text-medium-gray mb-6 leading-relaxed">
               New York's original tobacconist, serving Wall Street since 1910
             </p>
@@ -81,7 +81,7 @@ export function VenueShowcase() {
               </div>
             </div>
             <button 
-              className="w-full py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition"
+              className="w-full py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition luxury-button"
               onClick={() => document.getElementById('barclay-rex')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Explore Barclay Rex

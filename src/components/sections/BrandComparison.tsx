@@ -7,9 +7,10 @@ export function BrandComparison() {
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-8">
-        <h2 className="text-5xl font-thin text-center text-charcoal mb-16">
+        <h2 className="section-title text-center text-charcoal">
           Find Your Perfect Experience
         </h2>
+        <div className="w-32 h-px bg-gradient-to-r from-transparent via-gold to-transparent mx-auto mb-16"></div>
         
         <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
           

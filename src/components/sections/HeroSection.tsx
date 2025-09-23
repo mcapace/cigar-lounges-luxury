@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 export function HeroSection() {
   return (
-    <section className="min-h-[80vh] bg-gradient-to-b from-white to-cream flex items-center">
+    <section className="min-h-[70vh] bg-gradient-to-b from-white to-cream flex items-center">
       <div className="container mx-auto px-8 text-center max-w-6xl">
         
         {/* Subtle animation on load */}
         <motion.div 
-          className="mb-4"
+          className="mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -21,18 +21,25 @@ export function HeroSection() {
         
         {/* Large, elegant headline */}
         <motion.h1 
-          className="text-6xl md:text-7xl font-thin text-charcoal mb-6 leading-tight"
+          className="hero-title text-charcoal mb-8"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           Three Legendary
-          <span className="block text-gold italic font-serif">Destinations</span>
+          <motion.span 
+            className="block text-gold italic font-serif"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
+            Destinations
+          </motion.span>
         </motion.h1>
         
         {/* Refined subtext */}
         <motion.p 
-          className="text-xl text-medium-gray max-w-2xl mx-auto mb-12 font-light leading-relaxed"
+          className="text-xl text-medium-gray max-w-2xl mx-auto mb-16 font-light leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
@@ -48,10 +55,10 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <button className="btn-luxury-premium">
+          <button className="btn-luxury-premium luxury-button">
             Explore Collections
           </button>
-          <button className="btn-luxury-outline">
+          <button className="btn-luxury-outline luxury-button">
             Reserve Your Visit
           </button>
         </motion.div>
