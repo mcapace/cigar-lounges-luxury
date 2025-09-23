@@ -16,7 +16,7 @@ export function VenueShowcase() {
         </h2>
         
         {/* Grid with proper cards for all venues */}
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
           
           {/* Davidoff Card (covers both locations) */}
           <motion.div 

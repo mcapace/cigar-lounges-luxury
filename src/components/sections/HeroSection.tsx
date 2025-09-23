@@ -101,10 +101,10 @@ export function HeroSection() {
         
         {/* Enhanced CTAs */}
         <AdvancedMotion variant="slide" direction="up" distance={40} delay={1.6}>
-          <div className="flex gap-8 justify-center">
+          <div className="flex gap-6 justify-center">
             <MagneticHover strength={0.2}>
               <motion.button 
-                className="btn-luxury-premium luxury-button px-8 py-4 text-sm font-medium tracking-wide"
+                className="px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium tracking-wide"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -113,7 +113,7 @@ export function HeroSection() {
             </MagneticHover>
             <MagneticHover strength={0.2}>
               <motion.button 
-                className="btn-luxury-outline luxury-button px-8 py-4 text-sm font-medium tracking-wide"
+                className="px-8 py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-all duration-300 font-medium tracking-wide"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >

@@ -68,14 +68,14 @@ export function DavidoffHeritage() {
           </div>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-16">
+        <div className="grid md:grid-cols-2 gap-20">
           {/* Madison Avenue */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="flex flex-col"
+            className="flex flex-col h-full"
           >
             <div className="mb-6">
               <h3 className="text-2xl font-normal mb-2 text-charcoal">Madison Avenue</h3>
@@ -112,7 +112,7 @@ export function DavidoffHeritage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="flex flex-col"
+            className="flex flex-col h-full"
           >
             <div className="mb-6">
               <h3 className="text-2xl font-normal mb-2 text-charcoal">6th Avenue</h3>

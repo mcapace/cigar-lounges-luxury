@@ -22,7 +22,7 @@ export function VisitPlanning() {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Davidoff Madison */}
           <motion.div 
-            className="bg-cream p-8 rounded-lg"
+            className="bg-cream p-8 rounded-lg h-full flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -62,7 +62,7 @@ export function VisitPlanning() {
 
           {/* Barclay Rex */}
           <motion.div 
-            className="bg-cream p-8 rounded-lg"
+            className="bg-cream p-8 rounded-lg h-full flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -102,7 +102,7 @@ export function VisitPlanning() {
 
           {/* Davidoff 6th Avenue */}
           <motion.div 
-            className="bg-cream p-8 rounded-lg"
+            className="bg-cream p-8 rounded-lg h-full flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
