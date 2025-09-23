@@ -5,7 +5,9 @@ import { motion } from 'framer-motion';
 import { Navigation } from '@/components/ui/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { VenueShowcase } from '@/components/sections/VenueShowcase';
+import { VenueDetails } from '@/components/sections/VenueDetails';
 import { BrandComparison } from '@/components/sections/BrandComparison';
+import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { Footer } from '@/components/ui/Footer';
 import { ErrorBoundary, VenueErrorBoundary } from '@/components/ui/ErrorBoundary';
 import { ResponsiveTest } from '@/components/ui/ResponsiveTest';
@@ -40,7 +42,7 @@ export default function Home() {
 
   return (
     <ErrorBoundary>
-      <div className="min-h-screen bg-luxury-charcoal">
+      <div className="min-h-screen bg-off-white">
         <SkipToMainContent />
         <Navigation />
         
@@ -54,11 +56,18 @@ export default function Home() {
           </VenueErrorBoundary>
           
           <ErrorBoundary>
+            <VenueDetails />
+          </ErrorBoundary>
+          
+          <ErrorBoundary>
             <BrandComparison />
           </ErrorBoundary>
         </main>
         
         <Footer />
+        
+        {/* Scroll Progress and Back to Top */}
+        <ScrollProgress />
         
         {/* Luxury features */}
         <LuxuryCursor />
