@@ -84,17 +84,17 @@ export function HeroSection() {
         
         {/* Show all three partner logos */}
         <AdvancedMotion variant="fade" delay={1.4} className="mb-12">
-          <div className="flex items-center justify-center gap-12">
+          <div className="flex items-center justify-center gap-16">
             <img 
               src="/images/Davidoff Logo.png" 
               alt="Davidoff"
-              className="h-12 object-contain"
+              className="h-20 object-contain"
             />
-            <div className="w-px h-12 bg-gray-300"></div>
+            <div className="w-px h-20 bg-gray-300"></div>
             <img 
               src="/images/Barclay Rex logo.png" 
               alt="Barclay Rex"
-              className="h-14 object-contain"
+              className="h-24 object-contain"
             />
           </div>
         </AdvancedMotion>

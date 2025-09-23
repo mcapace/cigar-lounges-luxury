@@ -13,9 +13,9 @@ export function Footer() {
             <Image
               src="/images/cigar_aficionado_logo.png"
               alt="Cigar Aficionado"
-              width={120}
-              height={36}
-              className="h-8 mb-4"
+              width={180}
+              height={54}
+              className="h-12 mb-6"
             />
             <p className="text-sm text-gray-400">
               Curating exceptional cigar experiences since 1992
@@ -27,9 +27,9 @@ export function Footer() {
             <Image
               src="/images/Davidoff Logo.png"
               alt="Davidoff"
-              width={100}
-              height={30}
-              className="h-6 mb-4"
+              width={150}
+              height={45}
+              className="h-10 mb-6"
             />
             <ul className="space-y-2 text-sm text-gray-400">
               <li>
@@ -51,9 +51,9 @@ export function Footer() {
             <Image
               src="/images/Barclay Rex logo.png"
               alt="Barclay Rex"
-              width={100}
-              height={30}
-              className="h-6 mb-4"
+              width={150}
+              height={45}
+              className="h-10 mb-6"
             />
             <ul className="space-y-2 text-sm text-gray-400">
               <li>

@@ -31,9 +31,9 @@ export function VisitPlanning() {
             <Image 
               src={davidoffBrand.logo} 
               alt={davidoffBrand.name} 
-              width={32}
-              height={32}
-              className="h-8 mb-6 object-contain" 
+              width={80}
+              height={24}
+              className="h-12 mb-6 object-contain" 
             />
             <h3 className="text-xl font-medium mb-4 text-charcoal">{davidoffMadison.name}</h3>
             <div className="space-y-2 text-gray-600 body-text">
@@ -71,9 +71,9 @@ export function VisitPlanning() {
             <Image 
               src={barclayRexBrand.logo} 
               alt={barclayRexBrand.name} 
-              width={32}
-              height={32}
-              className="h-8 mb-6 object-contain" 
+              width={80}
+              height={24}
+              className="h-12 mb-6 object-contain" 
             />
             <h3 className="text-xl font-medium mb-4 text-charcoal">{barclayRex.name}</h3>
             <div className="space-y-2 text-gray-600 body-text">
@@ -111,9 +111,9 @@ export function VisitPlanning() {
             <Image 
               src={davidoffBrand.logo} 
               alt={davidoffBrand.name} 
-              width={32}
-              height={32}
-              className="h-8 mb-6 object-contain" 
+              width={80}
+              height={24}
+              className="h-12 mb-6 object-contain" 
             />
             <h3 className="text-xl font-medium mb-4 text-charcoal">{davidoffSixth.name}</h3>
             <div className="space-y-2 text-gray-600 body-text">

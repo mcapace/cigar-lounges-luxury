@@ -49,7 +49,7 @@ export function RefinedNavigation() {
             </motion.div>
             
             {/* Center: Navigation Links */}
-            <div className="hidden lg:flex items-center space-x-12">
+            <div className="hidden lg:flex items-center justify-center space-x-12">
               <div className="relative group">
                 <motion.button 
                   className="flex items-center gap-2 text-charcoal hover:text-gold transition-all duration-300 font-normal text-lg tracking-wide"

@@ -16,11 +16,11 @@ export function VenueShowcase() {
         </h2>
         
         {/* Grid with proper cards for all venues */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           
           {/* Davidoff Card (covers both locations) */}
           <motion.div 
-            className="bg-white border border-gray-200 p-8 hover:shadow-lg transition"
+            className="bg-white border border-gray-200 p-10 hover:shadow-lg transition h-full flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -35,7 +35,7 @@ export function VenueShowcase() {
             <p className="text-gray-600 mb-6 body-text">
               Experience Swiss excellence at two distinguished Manhattan locations
             </p>
-            <div className="space-y-4 mb-6">
+            <div className="space-y-4 mb-8 flex-grow">
               <div className="pb-4 border-b border-gray-100">
                 <h4 className="font-medium mb-2 text-charcoal">Madison Avenue</h4>
                 <p className="text-sm text-gray-600">The Flagship Experience</p>
@@ -49,7 +49,7 @@ export function VenueShowcase() {
               href="https://davidoff.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium"
+              className="inline-block px-6 py-3 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium text-center w-full"
             >
               Visit Davidoff Website →
             </a>
@@ -57,7 +57,7 @@ export function VenueShowcase() {
           
           {/* Barclay Rex Card */}
           <motion.div 
-            className="bg-white border border-gray-200 p-8 hover:shadow-lg transition"
+            className="bg-white border border-gray-200 p-10 hover:shadow-lg transition h-full flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -72,7 +72,7 @@ export function VenueShowcase() {
             <p className="text-gray-600 mb-6 body-text">
               New York's original tobacconist, serving Wall Street since 1910
             </p>
-            <div className="mb-6">
+            <div className="mb-8 flex-grow">
               <div className="pb-4">
                 <h4 className="font-medium mb-2 text-charcoal">Wall Street</h4>
                 <p className="text-sm text-gray-600">113 Years of Tradition</p>
@@ -83,7 +83,7 @@ export function VenueShowcase() {
               href="https://barclayrex.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium"
+              className="inline-block px-6 py-3 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium text-center w-full"
             >
               Visit Barclay Rex Website →
             </a>
