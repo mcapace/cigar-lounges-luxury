@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Navigation } from '@/components/ui/Navigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { VenueShowcase } from '@/components/sections/VenueShowcase';
+import { VenueDetails } from '@/components/sections/VenueDetails';
 import { BrandComparison } from '@/components/sections/BrandComparison';
 import { Footer } from '@/components/ui/Footer';
 import { ErrorBoundary, VenueErrorBoundary } from '@/components/ui/ErrorBoundary';
@@ -52,6 +53,10 @@ export default function Home() {
           <VenueErrorBoundary>
             <VenueShowcase />
           </VenueErrorBoundary>
+          
+          <ErrorBoundary>
+            <VenueDetails />
+          </ErrorBoundary>
           
           <ErrorBoundary>
             <BrandComparison />

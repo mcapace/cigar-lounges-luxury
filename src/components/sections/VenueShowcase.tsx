@@ -2,8 +2,11 @@
 
 import { motion } from 'framer-motion';
 import { MapPin, Award } from 'lucide-react';
+import { venueData } from '@/data/venues';
 
 export function VenueShowcase() {
+  const davidoffBrand = venueData.brands.find(b => b.id === 'davidoff');
+  const barclayRexBrand = venueData.brands.find(b => b.id === 'barclay-rex');
   return (
     <section className="py-24 bg-white">
       <div className="container mx-auto px-8">
@@ -44,7 +47,10 @@ export function VenueShowcase() {
                 </div>
               </div>
             </div>
-            <button className="w-full py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition">
+            <button 
+              className="w-full py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition"
+              onClick={() => document.getElementById('davidoff-madison')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Explore Davidoff
             </button>
           </div>
@@ -74,7 +80,10 @@ export function VenueShowcase() {
                 </div>
               </div>
             </div>
-            <button className="w-full py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition">
+            <button 
+              className="w-full py-3 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition"
+              onClick={() => document.getElementById('barclay-rex')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               Explore Barclay Rex
             </button>
           </div>

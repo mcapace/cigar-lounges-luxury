@@ -63,14 +63,14 @@ export function Navigation() {
                     onMouseEnter={() => setIsDavidoffDropdownOpen(true)}
                     onMouseLeave={() => setIsDavidoffDropdownOpen(false)}
                   >
-                    <a href="#madison" className="block py-2 hover:text-gold transition">Madison Avenue</a>
-                    <a href="#sixth" className="block py-2 hover:text-gold transition">6th Avenue</a>
+                    <a href="#davidoff-madison" className="block py-2 hover:text-gold transition">Madison Avenue</a>
+                    <a href="#davidoff-sixth" className="block py-2 hover:text-gold transition">6th Avenue</a>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
             
-            <a href="#barclay" className="text-charcoal hover:text-gold transition">
+            <a href="#barclay-rex" className="text-charcoal hover:text-gold transition">
               Barclay Rex
             </a>
           </div>
@@ -120,14 +120,14 @@ export function Navigation() {
                 {/* Navigation Links */}
                 <div className="space-y-8">
                   <a 
-                    href="#davidoff" 
+                    href="#davidoff-madison" 
                     className="block text-2xl text-charcoal hover:text-gold transition"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Davidoff
                   </a>
                   <a 
-                    href="#barclay" 
+                    href="#barclay-rex" 
                     className="block text-2xl text-charcoal hover:text-gold transition"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
