@@ -3,7 +3,7 @@ import "./globals.css";
 import { Analytics } from '@vercel/analytics/react';
 import { playfairDisplay, inter, cormorantGaramond } from './fonts';
 import { OrganizationStructuredData, BreadcrumbStructuredData } from '@/components/seo/StructuredData';
-import { AnalyticsProvider } from '@/components/providers/AnalyticsProvider';
+import { AnalyticsProviderWrapper } from '@/components/providers/AnalyticsProviderWrapper';
 
 export const metadata: Metadata = {
   title: {
@@ -112,9 +112,9 @@ export default function RootLayout({
       <body
         className={`${playfairDisplay.variable} ${inter.variable} ${cormorantGaramond.variable} antialiased`}
       >
-        <AnalyticsProvider>
+        <AnalyticsProviderWrapper>
           {children}
-        </AnalyticsProvider>
+        </AnalyticsProviderWrapper>
         <Analytics />
       </body>
     </html>
