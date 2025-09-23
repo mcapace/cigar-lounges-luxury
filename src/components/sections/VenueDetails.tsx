@@ -1,6 +1,5 @@
 'use client';
 
-import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { venueData } from '@/data/venues';
@@ -8,8 +7,6 @@ import { MapPin, Phone, Clock, Star } from 'lucide-react';
 import { AdvancedImageGallery } from '@/components/ui/AdvancedImageGallery';
 
 export function VenueDetails() {
-  const [selectedImage, setSelectedImage] = useState(0);
-  
   const davidoffMadison = venueData.brands[0].locations[0];
   const davidoffSixth = venueData.brands[0].locations[1];
   const barclayRex = venueData.brands[1].locations[0];
@@ -22,36 +19,12 @@ export function VenueDetails() {
           <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             
             {/* Image Gallery */}
-            <div className="space-y-4">
-              <div className="relative h-[600px] gallery-container image-container">
-                <Image
-                  src={davidoffMadison.images.hero}
-                  alt="Davidoff Madison Avenue"
-                  fill
-                  className="object-cover gallery-image"
-                  priority
-                />
-              </div>
-              {/* Thumbnail gallery */}
-              <div className="grid grid-cols-3 gap-2">
-                {davidoffMadison.images.gallery.slice(0, 3).map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setSelectedImage(idx)}
-                    className={`relative h-24 ${
-                      selectedImage === idx ? 'ring-2 ring-gold' : ''
-                    }`}
-                  >
-                    <Image 
-                      src={img} 
-                      alt={`Davidoff Madison ${idx + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
+            <AdvancedImageGallery 
+              folder="Davidoff Madison"
+              venueName="Davidoff Madison Avenue"
+              images={davidoffMadison.images.gallery}
+              heroImage={davidoffMadison.images.hero}
+            />
             
             {/* Content */}
             <div className="space-y-6">
@@ -183,36 +156,12 @@ export function VenueDetails() {
             </div>
 
             {/* Image Gallery */}
-            <div className="space-y-4">
-              <div className="relative h-[600px] gallery-container image-container">
-                <Image
-                  src={davidoffSixth.images.hero}
-                  alt="Davidoff 6th Avenue"
-                  fill
-                  className="object-cover gallery-image"
-                  priority
-                />
-              </div>
-              {/* Thumbnail gallery */}
-              <div className="grid grid-cols-3 gap-2">
-                {davidoffSixth.images.gallery.slice(0, 3).map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setSelectedImage(idx)}
-                    className={`relative h-24 ${
-                      selectedImage === idx ? 'ring-2 ring-gold' : ''
-                    }`}
-                  >
-                    <Image 
-                      src={img} 
-                      alt={`Davidoff 6th Avenue ${idx + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
+            <AdvancedImageGallery 
+              folder="Davidoff Sixth Ave"
+              venueName="Davidoff 6th Avenue"
+              images={davidoffSixth.images.gallery}
+              heroImage={davidoffSixth.images.hero}
+            />
           </div>
         </div>
       </section>
@@ -228,36 +177,12 @@ export function VenueDetails() {
           <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             
             {/* Image Gallery */}
-            <div className="space-y-4">
-              <div className="relative h-[600px] gallery-container image-container">
-                <Image
-                  src={barclayRex.images.hero}
-                  alt="Barclay Rex"
-                  fill
-                  className="object-cover gallery-image"
-                  priority
-                />
-              </div>
-              {/* Thumbnail gallery */}
-              <div className="grid grid-cols-3 gap-2">
-                {barclayRex.images.gallery.slice(0, 3).map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setSelectedImage(idx)}
-                    className={`relative h-24 ${
-                      selectedImage === idx ? 'ring-2 ring-gold' : ''
-                    }`}
-                  >
-                    <Image 
-                      src={img} 
-                      alt={`Barclay Rex ${idx + 1}`}
-                      fill
-                      className="object-cover"
-                    />
-                  </button>
-                ))}
-              </div>
-            </div>
+            <AdvancedImageGallery 
+              folder="Barclay Rex"
+              venueName="Barclay Rex"
+              images={barclayRex.images.gallery}
+              heroImage={barclayRex.images.hero}
+            />
             
             {/* Content */}
             <div className="space-y-6">
