@@ -14,19 +14,7 @@ export function VisitPlanning() {
     return allVenues.find(venue => venue.id === venueId);
   };
 
-  // Show loading state while order is being determined
-  if (venueOrder.length === 0) {
-    return (
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-8 max-w-6xl">
-          <h2 className="text-4xl font-normal text-center mb-12 text-charcoal">
-            Plan Your Visit
-          </h2>
-          <div className="text-center">Loading venues...</div>
-        </div>
-      </section>
-    );
-  }
+  // Always show content - venueOrder will have default values
 
   return (
     <section className="py-20 bg-white">

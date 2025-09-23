@@ -76,16 +76,25 @@ export function AdvancedImageGallery({ folder, venueName, images, heroImage }: A
 
   // Preload first 3 images immediately
   useEffect(() => {
-    if (allImages && allImages.length > 0) {
-      // Load main image and first two thumbnails
-      const toPreload = allImages.slice(0, 3);
-      toPreload.forEach((src, index) => {
-        const img = new window.Image();
-        img.src = src;
-        img.onload = () => {
-          setLoadedImages(prev => new Set(prev).add(index));
-        };
-      });
+    if (allImages && allImages.length > 0 && typeof window !== 'undefined') {
+      try {
+        // Load main image and first two thumbnails
+        const toPreload = allImages.slice(0, 3);
+        toPreload.forEach((src, index) => {
+          if (src) {
+            const img = new window.Image();
+            img.src = src;
+            img.onload = () => {
+              setLoadedImages(prev => new Set(prev).add(index));
+            };
+            img.onerror = () => {
+              console.warn(`Failed to load image: ${src}`);
+            };
+          }
+        });
+      } catch (error) {
+        console.error('Error preloading images:', error);
+      }
     }
   }, [allImages]);
 
