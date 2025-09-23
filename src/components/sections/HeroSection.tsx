@@ -34,7 +34,7 @@ export function HeroSection() {
       <div className="container mx-auto px-8 text-center max-w-6xl relative z-10">
         
         {/* Cigar Aficionado Logo */}
-        <AdvancedMotion variant="fade" delay={0.2} className="mb-12">
+        <AdvancedMotion variant="fade" delay={0.2} className="mb-8">
           <MagneticHover>
             <div className="flex justify-center mb-6">
               <Image
@@ -45,39 +45,40 @@ export function HeroSection() {
                 className="h-14 w-auto"
               />
             </div>
-            <span className="text-sm tracking-[0.4em] text-medium-gray uppercase font-light">
-              Select
+            <span className="text-xs tracking-[0.3em] text-medium-gray uppercase font-light">
+              Cigar Aficionado Select Partners
             </span>
           </MagneticHover>
         </AdvancedMotion>
         
-            {/* Large, elegant headline with text reveal */}
-            <div className="mb-16">
-              <AdvancedMotion variant="slide" direction="up" distance={80} delay={0.4}>
-                <h1 className="hero-title text-charcoal mb-8 font-display-optimized leading-normal">
-                  <TextReveal delay={0.6}>
-                    Three Legendary
-                  </TextReveal>
-                </h1>
-              </AdvancedMotion>
-              
-              <AdvancedMotion variant="scale" delay={0.8}>
-                <motion.span 
-                  className="hero-subtitle block text-gold gradient-text leading-tight"
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1, delay: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-                >
-                  Destinations
-                </motion.span>
-              </AdvancedMotion>
-            </div>
+        {/* Large, elegant headline with text reveal */}
+        <div className="mb-16">
+          <AdvancedMotion variant="slide" direction="up" distance={80} delay={0.4}>
+            <h1 className="hero-title text-charcoal mb-8 font-display-optimized leading-normal">
+              <TextReveal delay={0.6}>
+                Three Distinguished
+              </TextReveal>
+            </h1>
+          </AdvancedMotion>
+          
+          <AdvancedMotion variant="scale" delay={0.8}>
+            <motion.span 
+              className="hero-subtitle block text-gold gradient-text leading-tight"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1, delay: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
+            >
+              Destinations
+            </motion.span>
+          </AdvancedMotion>
+        </div>
         
         {/* Refined subtext */}
         <AdvancedMotion variant="fade" delay={1.2} className="mb-16">
           <p className="body-text text-xl text-medium-gray max-w-3xl mx-auto leading-relaxed">
-            Davidoff's Swiss excellence and Barclay Rex's New York heritage 
-            unite to offer unparalleled cigar experiences
+            An exclusive partnership showcasing New York's most storied cigar establishments. 
+            Discover the heritage, craftsmanship, and unique experiences that define 
+            each of these celebrated venues.
           </p>
         </AdvancedMotion>
         
@@ -90,7 +91,7 @@ export function HeroSection() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Explore Collections
+                Explore Their Stories
               </motion.button>
             </MagneticHover>
             <MagneticHover strength={0.2}>
@@ -99,7 +100,7 @@ export function HeroSection() {
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Reserve Your Visit
+                Visit Their Locations
               </motion.button>
             </MagneticHover>
           </div>

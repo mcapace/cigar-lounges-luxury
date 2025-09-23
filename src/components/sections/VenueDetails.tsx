@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { venueData } from '@/data/venues';
-import { MapPin, Phone, Clock, Star } from 'lucide-react';
+import { MapPin, Phone, Clock, Star, ExternalLink } from 'lucide-react';
 import { AdvancedImageGallery } from '@/components/ui/AdvancedImageGallery';
 
 export function VenueDetails() {
@@ -79,9 +79,15 @@ export function VenueDetails() {
                 </div>
               </div>
               
-              <button className="w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button">
-                Reserve Your Visit to Madison
-              </button>
+              <a 
+                href={davidoffMadison.website}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center gap-2 w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button justify-center"
+              >
+                Visit Davidoff Madison
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>
@@ -150,9 +156,15 @@ export function VenueDetails() {
                 </div>
               </div>
               
-              <button className="w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button">
-                Reserve Your Visit to 6th Avenue
-              </button>
+              <a 
+                href={davidoffSixth.website}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center gap-2 w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button justify-center"
+              >
+                Visit Davidoff 6th Avenue
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
 
             {/* Image Gallery */}
@@ -247,9 +259,15 @@ export function VenueDetails() {
                 </div>
               </div>
               
-              <button className="w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button">
-                Reserve Your Visit to Barclay Rex
-              </button>
+              <a 
+                href={barclayRex.website}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center gap-2 w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button justify-center"
+              >
+                Visit Barclay Rex
+                <ExternalLink className="w-4 h-4" />
+              </a>
             </div>
           </div>
         </div>

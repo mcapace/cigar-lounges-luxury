@@ -3,8 +3,10 @@
 import { motion } from 'framer-motion';
 import { MapPin, Award } from 'lucide-react';
 import { venueData } from '@/data/venues';
+import { useVenueRotation } from '@/hooks/useVenueRotation';
 
 export function VenueShowcase() {
+  const venueOrder = useVenueRotation();
   const davidoffBrand = venueData.brands.find(b => b.id === 'davidoff');
   const barclayRexBrand = venueData.brands.find(b => b.id === 'barclay-rex');
   return (
