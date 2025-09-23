@@ -54,7 +54,7 @@ export function HeroSection() {
             {/* Large, elegant headline with text reveal */}
             <div className="mb-16">
               <AdvancedMotion variant="slide" direction="up" distance={80} delay={0.4}>
-                <h1 className="hero-title text-charcoal mb-8 font-display-optimized leading-tight">
+                <h1 className="hero-title text-charcoal mb-8 font-display-optimized leading-normal">
                   <TextReveal delay={0.6}>
                     Three Legendary
                   </TextReveal>
