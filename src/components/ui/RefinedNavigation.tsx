@@ -34,29 +34,14 @@ export function RefinedNavigation() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: [0.25, 0.46, 0.45, 0.94] }}
       >
-        <div className="container mx-auto px-8 py-4">
-          <div className="flex items-center justify-between max-w-7xl mx-auto">
+        <div className="container mx-auto px-8 py-6">
+          <div className="flex flex-col items-center max-w-7xl mx-auto">
             
-            {/* Left: Cigar Aficionado Logo */}
-            <motion.div 
-              className="flex items-center"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src="/images/cigar_aficionado_logo.png"
-                alt="Cigar Aficionado"
-                width={140}
-                height={42}
-                className="h-10 w-auto"
-              />
-            </motion.div>
-            
-            {/* Center: Elegant Navigation Links */}
-            <div className="hidden lg:flex items-center space-x-12">
+            {/* Top: Navigation Links */}
+            <div className="hidden lg:flex items-center space-x-12 mb-4">
               <div className="relative group">
                 <motion.button 
-                  className="flex items-center gap-2 text-charcoal hover:text-gold transition-all duration-300 font-medium text-sm tracking-wide"
+                  className="flex items-center gap-2 text-charcoal hover:text-gold transition-all duration-300 font-medium text-base tracking-wide"
                   onMouseEnter={() => setIsDavidoffDropdownOpen(true)}
                   onMouseLeave={() => setIsDavidoffDropdownOpen(false)}
                   whileHover={{ y: -2 }}
@@ -105,14 +90,29 @@ export function RefinedNavigation() {
               
               <motion.a 
                 href="#barclay-rex" 
-                className="text-charcoal hover:text-gold transition-all duration-300 font-medium text-sm tracking-wide"
+                className="text-charcoal hover:text-gold transition-all duration-300 font-medium text-base tracking-wide"
                 whileHover={{ y: -2 }}
               >
                 Barclay Rex
               </motion.a>
             </div>
             
-            {/* Right: Refined CTA */}
+            {/* Center: Cigar Aficionado Logo */}
+            <motion.div 
+              className="flex items-center mb-4"
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.3 }}
+            >
+              <Image
+                src="/images/cigar_aficionado_logo.png"
+                alt="Cigar Aficionado"
+                width={160}
+                height={48}
+                className="h-12 w-auto"
+              />
+            </motion.div>
+            
+            {/* Bottom: Refined CTA */}
             <motion.button 
               className="px-6 py-3 text-sm font-medium text-charcoal border border-charcoal/30 hover:bg-charcoal hover:text-white transition-all duration-300 backdrop-blur-sm"
               whileHover={{ scale: 1.05, y: -2 }}
@@ -186,7 +186,7 @@ export function RefinedNavigation() {
                 <div className="space-y-8">
                   <motion.a 
                     href="#davidoff-madison" 
-                    className="block text-3xl font-light text-charcoal hover:text-gold transition-all duration-300"
+                    className="block text-2xl font-medium text-charcoal hover:text-gold transition-all duration-300"
                     onClick={() => setIsMobileMenuOpen(false)}
                     whileHover={{ scale: 1.05 }}
                   >
@@ -194,7 +194,7 @@ export function RefinedNavigation() {
                   </motion.a>
                   <motion.a 
                     href="#barclay-rex" 
-                    className="block text-3xl font-light text-charcoal hover:text-gold transition-all duration-300"
+                    className="block text-2xl font-medium text-charcoal hover:text-gold transition-all duration-300"
                     onClick={() => setIsMobileMenuOpen(false)}
                     whileHover={{ scale: 1.05 }}
                   >
