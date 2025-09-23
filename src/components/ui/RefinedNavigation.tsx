@@ -24,11 +24,7 @@ export function RefinedNavigation() {
       {/* Refined Desktop Navigation */}
       <motion.nav 
         className={`
-          fixed top-0 w-full z-50 transition-all duration-500
-          ${isScrolled 
-            ? 'bg-white/80 backdrop-blur-xl border-b border-light-gray/50 shadow-lg' 
-            : 'bg-transparent'
-          }
+          sticky top-0 w-full z-50 transition-all duration-500 bg-white/95 backdrop-blur-xl border-b border-light-gray/50 shadow-sm
         `}
         initial={{ y: -100 }}
         animate={{ y: 0 }}

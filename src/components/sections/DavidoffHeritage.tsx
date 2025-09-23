@@ -3,6 +3,26 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
+interface TimelineItemProps {
+  year: string;
+  text: string;
+}
+
+function TimelineItem({ year, text }: TimelineItemProps) {
+  return (
+    <motion.div 
+      className="flex gap-4"
+      initial={{ opacity: 0, x: -20 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
+      <span className="text-gold font-medium min-w-[60px]">{year}</span>
+      <span className="text-medium-gray body-text">{text}</span>
+    </motion.div>
+  );
+}
+
 export function DavidoffHeritage() {
   return (
     <section className="py-20 bg-white">
@@ -11,11 +31,12 @@ export function DavidoffHeritage() {
           <Image 
             src="/images/Davidoff Logo.png" 
             alt="Davidoff" 
-            width={120}
-            height={36}
-            className="h-12 mx-auto mb-6" 
+            width={200}
+            height={60}
+            className="h-12 mx-auto mb-8 object-contain"
+            style={{ maxWidth: '200px' }}
           />
-          <h2 className="text-4xl font-thin text-charcoal">The Davidoff Experience in New York</h2>
+          <h2 className="text-4xl font-normal text-charcoal">A Legacy of Swiss Excellence</h2>
           <div className="w-20 h-px bg-gold mx-auto mt-6"></div>
         </div>
         
@@ -25,6 +46,26 @@ export function DavidoffHeritage() {
             the pinnacle of Swiss craftsmanship in tobacco. Today, New York's two 
             Davidoff locations each offer distinct interpretations of this legacy.
           </p>
+        </div>
+        
+        {/* Davidoff Timeline to balance with Barclay Rex */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <h3 className="text-2xl font-normal text-center mb-12 text-charcoal">Davidoff Milestones</h3>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="space-y-6">
+              <TimelineItem year="1906" text="Zino Davidoff born in Kiev" />
+              <TimelineItem year="1911" text="Family opens tobacco shop in Geneva" />
+              <TimelineItem year="1968" text="Iconic white band introduced" />
+              <TimelineItem year="1970" text="First Château series launched" />
+            </div>
+            <div className="space-y-6">
+              <TimelineItem year="1990" text="Dominican production begins" />
+              <TimelineItem year="2000s" text="Madison Avenue flagship opens" />
+              <TimelineItem year="2010s" text="6th Avenue location established" />
+              <TimelineItem year="Today" text="Leading luxury cigar brand globally" />
+            </div>
+          </div>
         </div>
         
         <div className="grid md:grid-cols-2 gap-12">

@@ -34,11 +34,12 @@ export function BarclayRexHeritage() {
           <Image 
             src="/images/Barclay Rex logo.png" 
             alt="Barclay Rex" 
-            width={120}
-            height={36}
-            className="h-12 mx-auto mb-6" 
+            width={200}
+            height={60}
+            className="h-12 mx-auto mb-8 object-contain"
+            style={{ maxWidth: '200px' }}
           />
-          <h2 className="text-4xl font-thin text-charcoal">Since 1910: A New York Institution</h2>
+          <h2 className="text-4xl font-normal text-charcoal">113 Years on Wall Street</h2>
           <div className="w-20 h-px bg-gold mx-auto mt-6"></div>
         </div>
         

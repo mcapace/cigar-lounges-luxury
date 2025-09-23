@@ -74,6 +74,21 @@ export function AdvancedImageGallery({ folder, venueName, images, heroImage }: A
     }
   }, [isIntersecting]);
 
+  // Preload first 3 images immediately
+  useEffect(() => {
+    if (allImages && allImages.length > 0) {
+      // Load main image and first two thumbnails
+      const toPreload = allImages.slice(0, 3);
+      toPreload.forEach((src, index) => {
+        const img = new window.Image();
+        img.src = src;
+        img.onload = () => {
+          setLoadedImages(prev => new Set(prev).add(index));
+        };
+      });
+    }
+  }, [allImages]);
+
   return (
     <div ref={ref} className="space-y-4">
       {/* Main Image */}
@@ -98,7 +113,7 @@ export function AdvancedImageGallery({ folder, venueName, images, heroImage }: A
                 alt={`${venueName} - ${selectedImage === 0 ? 'Hero' : `Gallery ${selectedImage}`}`}
                 fill
                 className="object-cover gallery-image"
-                priority={selectedImage === 0}
+                      priority={true}
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 onLoad={() => handleImageLoad(selectedImage)}
               />

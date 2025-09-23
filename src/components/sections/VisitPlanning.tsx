@@ -14,10 +14,24 @@ export function VisitPlanning() {
     return allVenues.find(venue => venue.id === venueId);
   };
 
+  // Show loading state while order is being determined
+  if (venueOrder.length === 0) {
+    return (
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-8 max-w-6xl">
+          <h2 className="text-4xl font-normal text-center mb-12 text-charcoal">
+            Plan Your Visit
+          </h2>
+          <div className="text-center">Loading venues...</div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-8 max-w-6xl">
-        <h2 className="text-4xl font-thin text-center mb-12 text-charcoal">
+        <h2 className="text-4xl font-normal text-center mb-12 text-charcoal">
           Plan Your Visit
         </h2>
         
@@ -31,7 +45,7 @@ export function VisitPlanning() {
             return (
               <motion.div 
                 key={venueId}
-                className="bg-cream p-8"
+                className="bg-cream p-8 rounded-lg"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -42,31 +56,43 @@ export function VisitPlanning() {
                   alt={brand?.name || ''} 
                   width={32}
                   height={32}
-                  className="h-8 mb-4" 
+                  className="h-8 mb-6 object-contain" 
                 />
-                <h3 className="text-xl font-medium mb-2 text-charcoal">{venue.name}</h3>
-                <div className="space-y-3 text-sm text-medium-gray body-text">
-                  <p>📍 {venue.address}</p>
-                  <p>📞 {venue.phone}</p>
-                  <p>🕐 {Object.values(venue.hours).join(', ')}</p>
+                <h3 className="text-xl font-medium mb-4 text-charcoal">{venue.name}</h3>
+                <div className="space-y-2 text-gray-600 body-text">
+                  <p className="flex items-start gap-2">
+                    <span>📍</span>
+                    <span>{venue.address}</span>
+                  </p>
+                  <p className="flex items-center gap-2">
+                    <span>📞</span>
+                    <span>{venue.phone}</span>
+                  </p>
+                  <p className="flex items-start gap-2">
+                    <span>🕐</span>
+                    <span>
+                      {venueId === 'davidoff-madison' && 'Mon-Sat: 10AM-8PM, Sun: 12PM-6PM'}
+                      {venueId === 'davidoff-sixth' && 'Mon-Fri: 10AM-9PM, Sat-Sun: 11AM-8PM'}
+                      {venueId === 'barclay-rex' && 'Mon-Fri: 8AM-7PM, Sat: 10AM-6PM, Sun: Closed'}
+                    </span>
+                  </p>
                 </div>
                 <a 
                   href={venue.website} 
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="inline-flex items-center gap-1 mt-4 text-gold hover:underline transition-colors"
+                  className="inline-block mt-6 text-gold hover:underline transition-colors"
                 >
-                  Visit Website
-                  <ExternalLink className="w-3 h-3" />
+                  Visit Website →
                 </a>
               </motion.div>
             );
           })}
         </div>
         
-        <div className="text-center mt-12 text-sm text-medium-gray body-text">
-          Hours may vary. Please visit each venue's website for current information.
-        </div>
+        <p className="text-center text-sm text-gray-500 mt-8 body-text">
+          Hours may vary for holidays. Please check each venue's website for current information.
+        </p>
       </div>
     </section>
   );
