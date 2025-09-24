@@ -37,17 +37,17 @@ export default function Home() {
       const urlParams = new URLSearchParams(window.location.search);
       const testRotation = urlParams.get('rotation');
       
-      // Use test rotation if provided, otherwise use date-based
-      const today = new Date().getDate(); // Day of month (1-31)
+      // Use test rotation if provided, otherwise use random rotation
       const orderIndex = testRotation !== null 
         ? parseInt(testRotation) % 3
-        : today % 3;
+        : Math.floor(Math.random() * 3); // Random 0, 1, or 2
       
       setVenueOrder(`order-${orderIndex + 1}`);
       setFullRotation(`rotation-${orderIndex}`);
       
-      console.log(`Venue rotation: ${venueOrder} (Day ${today} of month, Index ${orderIndex})`);
+      console.log(`Venue rotation: ${venueOrder} (Random index ${orderIndex})`);
       console.log(`Test with: ?rotation=0, ?rotation=1, or ?rotation=2`);
+      console.log(`Refresh page to see different random order!`);
     }
   }, [venueOrder]);
   return (
