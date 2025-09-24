@@ -13,7 +13,7 @@ export function VisitPlanning() {
   const barclayRexBrand = venueData.brands[1];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="plan-visit" className="py-20 bg-white">
       <div className="container mx-auto px-8 max-w-6xl">
         <h2 className="text-4xl font-normal text-center mb-12 text-charcoal">
           Plan Your Visit

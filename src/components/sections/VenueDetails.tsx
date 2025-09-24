@@ -36,7 +36,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
   const barclayRex = venueData.brands[1].locations[0];
 
   return (
-    <div className={`venues-sections-container ${fullRotation}`}>
+    <div id="heritage" className={`venues-sections-container ${fullRotation}`}>
       {/* DAVIDOFF MADISON AVENUE */}
       <section id="davidoff-madison" className="madison-section py-20 bg-white">
         <div className="container mx-auto px-8">

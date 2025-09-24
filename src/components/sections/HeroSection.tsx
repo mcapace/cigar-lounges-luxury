@@ -80,20 +80,22 @@ export function HeroSection() {
         {/* Enhanced CTAs */}
         <AdvancedMotion variant="slide" direction="up" distance={40} delay={1.6}>
           <div className="flex gap-6 justify-center">
-            <motion.button 
-              className="px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium tracking-wide"                                                                                          
+            <motion.a 
+              href="#heritage"
+              className="px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium tracking-wide inline-block"                                                                                          
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
               Explore Their Stories
-            </motion.button>
-            <motion.button 
-              className="px-8 py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-all duration-300 font-medium tracking-wide"                                                       
+            </motion.a>
+            <motion.a 
+              href="#plan-visit"
+              className="px-8 py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-all duration-300 font-medium tracking-wide inline-block"                                                       
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
               Visit Their Locations
-            </motion.button>
+            </motion.a>
           </div>
         </AdvancedMotion>
       </div>
