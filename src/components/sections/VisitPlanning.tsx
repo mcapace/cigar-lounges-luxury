@@ -85,10 +85,22 @@ export function VisitPlanning() {
                 <Phone className="w-5 h-5 text-gold flex-shrink-0" />
                 <span>{barclayRex.phone}</span>
               </p>
-              <p className="flex items-start gap-3">
-                <Clock className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
-                <span>Mon-Fri: 8AM-7PM, Sat: 10AM-6PM, Sun: Closed</span>
-              </p>
+              <div className="space-y-2">
+                <p className="flex items-start gap-3">
+                  <Clock className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="text-sm font-medium text-charcoal">Store Hours:</div>
+                    <div className="text-sm">Mon-Fri: 10AM-8PM, Sat-Sun: 11AM-7PM</div>
+                  </div>
+                </p>
+                <p className="flex items-start gap-3">
+                  <Users className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
+                  <div>
+                    <div className="text-sm font-medium text-charcoal">Club Hours:</div>
+                    <div className="text-sm">Mon-Fri: 11AM-1AM, Sat: 2PM-12AM, Sun: 1PM-11PM</div>
+                  </div>
+                </p>
+              </div>
             </div>
             <a 
               href={barclayRex.website} 

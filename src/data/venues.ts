@@ -10,6 +10,16 @@ export interface VenueHours {
   sunday: string;
 }
 
+export interface ClubHours {
+  monday: string;
+  tuesday: string;
+  wednesday: string;
+  thursday: string;
+  friday: string;
+  saturday: string;
+  sunday: string;
+}
+
 export interface VenueLocation {
   id: string;
   name: string;
@@ -22,6 +32,7 @@ export interface VenueLocation {
   phone: string;
   email?: string;
   hours: VenueHours;
+  clubHours?: ClubHours;
   images: {
     hero: string;
     gallery: string[];
@@ -213,7 +224,7 @@ export const venueData: { brands: Brand[] } = {
       name: 'Barclay Rex',
       logo: '/images/Barclay Rex logo.png',
       tagline: "New York's Original. Since 1910.",
-      description: 'Before the towers rose, before Wall Street became the world\'s financial capital, there was Barclay Rex. For 113 years, this family-owned institution has been the keeper of New York\'s cigar heritage, surviving Prohibition, the Great Depression, and every transformation of the city around it.',
+      description: 'Before the towers rose, before Wall Street became the world\'s financial capital, there was Barclay Rex. For 115 years, this family-owned institution has been the keeper of New York\'s cigar heritage, surviving Prohibition, the Great Depression, and every transformation of the city around it.',
       accentColor: '#8B4513', // Vintage brown
       locations: [
         {
@@ -221,20 +232,29 @@ export const venueData: { brands: Brand[] } = {
           name: 'Barclay Rex',
           shortName: 'Wall Street',
           tagline: 'A New York Institution',
-          description: 'Founded by Vincent Nastri in 1910, Barclay Rex isn\'t just a tobacconist—it\'s a living museum of American cigar history. The same family that opened our doors over a century ago still greets customers today, maintaining traditions while embracing innovation.',
-          address: '75 Broad Street, New York, NY 10004',
+          description: 'Founded by Vincent Nastri in 1910, Barclay Rex isn\'t just a tobacconist—it\'s a living museum of American cigar history. The same family that opened our doors 115 years ago still greets customers today, maintaining traditions while embracing innovation.',
+          address: '126 Pearl Street, New York, NY 10004',
           website: 'https://barclayrex.com/',
           neighborhood: 'Financial District',
           phone: '(212) 809-9500',
           email: 'info@barclayrex.com',
           hours: {
-            monday: '8:00 AM - 7:00 PM',
-            tuesday: '8:00 AM - 7:00 PM',
-            wednesday: '8:00 AM - 7:00 PM',
-            thursday: '8:00 AM - 7:00 PM',
-            friday: '8:00 AM - 7:00 PM',
-            saturday: '10:00 AM - 6:00 PM',
-            sunday: 'Closed',
+            monday: '10:00 AM - 8:00 PM',
+            tuesday: '10:00 AM - 8:00 PM',
+            wednesday: '10:00 AM - 8:00 PM',
+            thursday: '10:00 AM - 8:00 PM',
+            friday: '10:00 AM - 8:00 PM',
+            saturday: '11:00 AM - 7:00 PM',
+            sunday: '11:00 AM - 7:00 PM',
+          },
+          clubHours: {
+            monday: '11:00 AM - 1:00 AM',
+            tuesday: '11:00 AM - 1:00 AM',
+            wednesday: '11:00 AM - 1:00 AM',
+            thursday: '11:00 AM - 1:00 AM',
+            friday: '11:00 AM - 1:00 AM',
+            saturday: '2:00 PM - 12:00 AM',
+            sunday: '1:00 PM - 11:00 PM',
           },
           images: {
             hero: '/images/Barclay Rex/EFuerniss_KAMI_BarclayRex_6889 copy 2.jpg',
@@ -253,7 +273,7 @@ export const venueData: { brands: Brand[] } = {
             'The Barclay Rex Museum',
             'Wall Street Traditions',
           ],
-          signature: 'Keeper of New York\'s cigar heritage. Our humidor contains not just cigars, but stories: pre-embargo Cubans that survived Prohibition in hidden vaults, vintage boxes from defunct manufacturers, and blends created exclusively for Wall Street\'s titans of industry.',
+          signature: 'Keeper of New York\'s cigar heritage for 115 years. Our humidor contains not just cigars, but stories: pre-embargo Cubans that survived Prohibition in hidden vaults, vintage boxes from defunct manufacturers, and blends created exclusively for Wall Street\'s titans of industry.',
           experience: {
             headline: 'Four Generations of Tobacco Excellence',
             description: 'Today, our fourth-generation master blender continues this tradition, creating personalized cigars that become family heirlooms. Our humidor contains not just cigars, but stories.',
