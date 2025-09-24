@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useScroll, useTransform, useSpring } from 'framer-motion';
 import { useRef } from 'react';
 
 interface AdvancedMotionProps {
@@ -11,6 +11,8 @@ interface AdvancedMotionProps {
   duration?: number;
   direction?: 'up' | 'down' | 'left' | 'right';
   distance?: number;
+  stiffness?: number;
+  damping?: number;
 }
 
 export function AdvancedMotion({
@@ -21,7 +23,22 @@ export function AdvancedMotion({
   duration = 0.6,
   direction = 'up',
   distance = 50,
+  stiffness = 100,
+  damping = 20,
 }: AdvancedMotionProps) {
+  const ref = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['start end', 'end start'],
+  });
+
+  const springConfig = { stiffness, damping };
+  const y = useSpring(useTransform(scrollYProgress, [0, 1], [distance, -distance]), springConfig);
+  const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0]), springConfig);
+  const scale = useSpring(useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 0.8]), springConfig);
+  const rotate = useSpring(useTransform(scrollYProgress, [0, 1], [0, 360]), springConfig);
+  const blur = useSpring(useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [10, 0, 0, 10]), springConfig);
+
   const getVariants = () => {
     const baseVariants = {
       hidden: { opacity: 0 },
@@ -82,8 +99,26 @@ export function AdvancedMotion({
     }
   };
 
+  const getScrollStyle = () => {
+    switch (variant) {
+      case 'fade':
+        return { opacity };
+      case 'slide':
+        return { y, opacity };
+      case 'scale':
+        return { scale, opacity };
+      case 'rotate':
+        return { rotate, opacity };
+      case 'blur':
+        return { filter: `blur(${blur}px)`, opacity };
+      default:
+        return { opacity };
+    }
+  };
+
   return (
     <motion.div
+      ref={ref}
       className={className}
       initial="hidden"
       whileInView="visible"
@@ -94,6 +129,7 @@ export function AdvancedMotion({
         delay,
         ease: [0.25, 0.46, 0.45, 0.94],
       }}
+      style={getScrollStyle()}
       whileHover={variant === 'magnetic' ? { scale: 1.05 } : {}}
       whileTap={variant === 'magnetic' ? { scale: 0.95 } : {}}
     >
