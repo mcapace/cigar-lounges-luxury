@@ -263,6 +263,9 @@ export const venueData: { brands: Brand[] } = {
               '/images/Barclay Rex/EFuerniss_KAMI_BarclayRex_7007 copy 1.jpg',
               '/images/Barclay Rex/EFuerniss_KAMI_BarclayRex_7181.jpg',
               '/images/Barclay Rex/EFuerniss_KAMI_BarclayRex_6889 copy 2.jpg',
+              '/images/Barclay Rex/image1.jpeg',
+              '/images/Barclay Rex/image2.jpeg',
+              '/images/Barclay Rex/image3.jpeg',
             ],
           },
           features: [
