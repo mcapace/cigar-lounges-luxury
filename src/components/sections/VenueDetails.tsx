@@ -112,11 +112,6 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
         </div>
       </section>
 
-      {/* Visual Separator */}
-      <div className="py-16 flex justify-center">
-        <div className="w-32 h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
-      </div>
-
       {/* DAVIDOFF 6TH AVENUE */}
       <section id="davidoff-sixth" className="sixth-section py-20 bg-cream">
         <div className="container mx-auto px-8">
@@ -237,11 +232,6 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
           </div>
         </div>
       </section>
-
-      {/* Visual Separator */}
-      <div className="py-16 flex justify-center">
-        <div className="w-32 h-px bg-gradient-to-r from-transparent via-gold to-transparent"></div>
-      </div>
 
       {/* BARCLAY REX */}
       <section id="barclay-rex" className="barclay-section py-20 bg-white">
