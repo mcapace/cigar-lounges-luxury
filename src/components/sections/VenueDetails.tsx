@@ -206,8 +206,10 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
           <div className="max-w-4xl mx-auto mb-16">
             <p className="text-lg text-medium-gray text-center mb-8 body-text">
               Since Zino Davidoff's founding vision in Geneva, the brand has represented 
-              the pinnacle of Swiss craftsmanship in tobacco. Today, New York's two 
-              Davidoff locations each offer distinct interpretations of this legacy.
+              the pinnacle of Swiss craftsmanship in tobacco. From protecting French tobacco 
+              during WWII to serving luminaries like Orson Welles and Baron Rothschild, 
+              Davidoff's philosophy of "time beautifully filled" continues through New York's 
+              two distinguished locations.
             </p>
           </div>
           
@@ -217,16 +219,16 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <TimelineItem year="1906" text="Zino Davidoff born in Kiev" />
-                <TimelineItem year="1911" text="Family opens tobacco shop in Geneva" />
-                <TimelineItem year="1968" text="Iconic white band introduced" />
-                <TimelineItem year="1970" text="First Château series launched" />
+                <TimelineItem year="1906" text="Zino Davidoff born in Kiev, Ukraine" />
+                <TimelineItem year="1911" text="Family opens Davidoff of Geneva tobacco shop" />
+                <TimelineItem year="1930s" text="World's first climate-controlled humidor room" />
+                <TimelineItem year="1940s" text="Protected French tobacco inventory during WWII" />
               </div>
               <div className="space-y-6">
-                <TimelineItem year="1990" text="Dominican production begins" />
-                <TimelineItem year="2000s" text="Madison Avenue flagship opens" />
-                <TimelineItem year="2010s" text="6th Avenue location established" />
-                <TimelineItem year="Today" text="Leading luxury cigar brand globally" />
+                <TimelineItem year="1968" text="Iconic white band collection introduced" />
+                <TimelineItem year="1987" text="Davidoff of Geneva opens in New York City" />
+                <TimelineItem year="2000s" text="Madison Avenue flagship experience" />
+                <TimelineItem year="Today" text="65 flagship stores across 700+ merchants worldwide" />
               </div>
             </div>
           </div>
@@ -338,8 +340,11 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
           <div className="max-w-4xl mx-auto mb-16 text-center">
             <p className="text-lg text-medium-gray body-text">
               For 113 years, Barclay Rex has stood as Wall Street's tobacconist. 
-              Four generations of the Nastri family have preserved traditions while 
-              serving everyone from Morgan partners to modern entrepreneurs.
+              Founded by Vincent Nastri, a pipe maker from Salerno, Italy, the store 
+              was named after its original location between Barclay and Church Streets 
+              and Vincent's faithful Great Dane, Rex. Four generations of the Nastri 
+              family have preserved traditions while serving everyone from Morgan partners 
+              to modern entrepreneurs.
             </p>
           </div>
           
@@ -349,16 +354,16 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
             
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
-                <TimelineItem year="1910" text="Vincent Nastri opens doors on Wall Street" />
+                <TimelineItem year="1910" text="Vincent Nastri opens between Barclay and Church Streets" />
                 <TimelineItem year="1920" text="Survives Prohibition with 'medicinal tobacco' permits" />
                 <TimelineItem year="1929" text="Remains open during Black Tuesday crash" />
-                <TimelineItem year="1945" text="V-E Day celebration depletes entire inventory" />
+                <TimelineItem year="1949" text="Moves to Maiden Lane under Vincent Nastri II" />
               </div>
               <div className="space-y-6">
                 <TimelineItem year="1960" text="Begins pre-embargo Cuban acquisition program" />
                 <TimelineItem year="1987" text="Open during Black Monday, calming nerves" />
                 <TimelineItem year="2001" text="First to reopen after 9/11" />
-                <TimelineItem year="Today" text="Fourth generation continues the legacy" />
+                <TimelineItem year="Today" text="126 Pearl Street - Fourth generation continues the legacy" />
               </div>
             </div>
           </div>
