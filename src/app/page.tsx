@@ -42,14 +42,18 @@ export default function Home() {
         ? parseInt(testRotation) % 3
         : Math.floor(Math.random() * 3); // Random 0, 1, or 2
       
-      setVenueOrder(`order-${orderIndex + 1}`);
-      setFullRotation(`rotation-${orderIndex}`);
+      const newVenueOrder = `order-${orderIndex + 1}`;
+      const newFullRotation = `rotation-${orderIndex}`;
       
-      console.log(`Venue rotation: ${venueOrder} (Random index ${orderIndex})`);
+      setVenueOrder(newVenueOrder);
+      setFullRotation(newFullRotation);
+      
+      console.log(`Venue rotation: ${newVenueOrder} (Random index ${orderIndex})`);
+      console.log(`Full rotation: ${newFullRotation}`);
       console.log(`Test with: ?rotation=0, ?rotation=1, or ?rotation=2`);
       console.log(`Refresh page to see different random order!`);
     }
-  }, [venueOrder]);
+  }, []); // Empty dependency array - run only once on mount
   return (
         <ErrorBoundary>
           <div className="min-h-screen bg-off-white">

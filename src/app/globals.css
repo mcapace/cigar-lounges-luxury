@@ -673,7 +673,7 @@ button, .cta {
 .venue-container {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 /* Order 1: Madison, Sixth, Barclay */
@@ -695,7 +695,6 @@ button, .cta {
 .venues-sections-container {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
 }
 
 /* Rotation 0: Madison, Sixth, Barclay */
@@ -717,7 +716,6 @@ button, .cta {
 .heritage-container {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
 }
 
 /* Heritage rotation follows venue rotation */
