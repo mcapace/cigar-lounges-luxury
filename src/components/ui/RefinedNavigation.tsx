@@ -33,8 +33,16 @@ export function RefinedNavigation() {
         <div className="container mx-auto px-8 py-4">
           <div className="flex items-center justify-between max-w-7xl mx-auto">
             
-            {/* Left: Empty space for balance */}
-            <div className="w-32"></div>
+            {/* Left: Cigar Aficionado Logo */}
+            <div className="flex items-center">
+              <Image
+                src="/images/cigar_aficionado_logo.png"
+                alt="Cigar Aficionado"
+                width={120}
+                height={36}
+                className="h-8 w-auto"
+              />
+            </div>
             
             {/* Center: Navigation Links */}
             <div className="hidden lg:flex items-center justify-center space-x-12">

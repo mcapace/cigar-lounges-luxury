@@ -4,19 +4,19 @@
 
 /* Refined Luxury Color Palette */
 :root {
-  /* Primary Palette */
+  /* Primary Palette - More Masculine & Neutral */
   --white: #FFFFFF;
-  --off-white: #FAFAF8;
-  --cream: #F7F3F0;
-  --light-gray: #E8E6E1;
-  --medium-gray: #9B9691;
-  --charcoal: #2C2926;
-  --rich-black: #1A1815;
+  --off-white: #F8F9FA;  /* Cooler, more neutral */
+  --cream: #F1F3F4;      /* Less warm, more gray-based */
+  --light-gray: #E5E7EB; /* Cooler gray */
+  --medium-gray: #6B7280; /* More masculine gray */
+  --charcoal: #1F2937;   /* Cooler, more modern */
+  --rich-black: #111827; /* Deeper, cooler black */
   
-  /* Accent Colors */
-  --gold: #C9A961;  /* Refined gold, not too bright */
-  --gold-light: #E4D4A8;
-  --gold-dark: #9C7F3E;
+  /* Accent Colors - More Masculine */
+  --gold: #B8860B;      /* Darker, more masculine gold */
+  --gold-light: #D4AF37; /* Brighter accent gold */
+  --gold-dark: #8B6914;  /* Deeper gold */
   --burgundy: #6B2737;  /* For Barclay Rex accents */
   --navy: #1E3A5F;  /* For Davidoff accents */
   
