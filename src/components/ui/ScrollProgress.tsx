@@ -1,52 +1,27 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ChevronUp } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 export function ScrollProgress() {
-  const [scrollProgress, setScrollProgress] = useState(0);
-  const [showBackToTop, setShowBackToTop] = useState(false);
-
+  const [progress, setProgress] = useState(0);
+  
   useEffect(() => {
-    const updateScrollProgress = () => {
-      const scrollTop = window.scrollY;
-      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (scrollTop / docHeight) * 100;
-      
-      setScrollProgress(progress);
-      setShowBackToTop(scrollTop > 300);
+    const updateProgress = () => {
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrolled = (window.scrollY / scrollHeight) * 100;
+      setProgress(scrolled);
     };
-
-    window.addEventListener('scroll', updateScrollProgress);
-    return () => window.removeEventListener('scroll', updateScrollProgress);
+    
+    window.addEventListener('scroll', updateProgress);
+    return () => window.removeEventListener('scroll', updateProgress);
   }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
+  
   return (
-    <>
-      {/* Scroll Progress Bar */}
+    <div className="fixed top-0 left-0 w-full h-1 bg-gray-200 z-50">
       <div 
-        className="scroll-progress"
-        style={{ width: `${scrollProgress}%` }}
+        className="h-full bg-gold transition-all duration-300"
+        style={{ width: `${progress}%` }}
       />
-
-      {/* Back to Top Button */}
-      <motion.button
-        className={`back-to-top ${showBackToTop ? 'visible' : ''}`}
-        onClick={scrollToTop}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ 
-          opacity: showBackToTop ? 1 : 0,
-          scale: showBackToTop ? 1 : 0.8
-        }}
-        transition={{ duration: 0.3 }}
-      >
-        <ChevronUp size={20} />
-      </motion.button>
-    </>
+    </div>
   );
 }

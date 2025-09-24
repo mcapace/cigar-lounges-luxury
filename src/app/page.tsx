@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import { SponsoredContentDisclosure } from '@/components/ui/SponsoredContentDisclosure';
 import { RefinedNavigation } from '@/components/ui/RefinedNavigation';
@@ -10,6 +11,7 @@ import { VenueDetails } from '@/components/sections/VenueDetails';
 import { BarclayRexHeritage } from '@/components/sections/BarclayRexHeritage';
 import { VisitPlanning } from '@/components/sections/VisitPlanning';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
+import { ScrollToTop } from '@/components/ui/ScrollToTop';
 import { Footer } from '@/components/ui/Footer';
 import { ErrorBoundary, VenueErrorBoundary } from '@/components/ui/ErrorBoundary';
 import { ResponsiveTest } from '@/components/ui/ResponsiveTest';
@@ -25,6 +27,23 @@ if (typeof window !== 'undefined') {
 }
 
 export default function Home() {
+  const [venueOrder, setVenueOrder] = useState('order-1');
+  
+  useEffect(() => {
+    // Only run on client
+    if (typeof window !== 'undefined') {
+      // Get current date-based rotation (changes daily)
+      const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000);
+      const orderIndex = dayOfYear % 3;
+      setVenueOrder(`order-${orderIndex + 1}`);
+      
+      // For testing - uncomment this line and comment the above for random rotation on each page load:
+      // const orderIndex = Math.floor(Math.random() * 3);
+      // setVenueOrder(`order-${orderIndex + 1}`);
+      
+      console.log(`Venue rotation: ${venueOrder} (Day ${dayOfYear} of year)`);
+    }
+  }, [venueOrder]);
   return (
         <ErrorBoundary>
           <div className="min-h-screen bg-off-white">
@@ -38,7 +57,7 @@ export default function Home() {
               </ErrorBoundary>
               
               <VenueErrorBoundary>
-                <VenueShowcase />
+                <VenueShowcase venueOrder={venueOrder} />
               </VenueErrorBoundary>
               
               <ErrorBoundary>
@@ -62,6 +81,7 @@ export default function Home() {
             
             {/* Scroll Progress and Back to Top */}
             <ScrollProgress />
+            <ScrollToTop />
             
             {/* Luxury features */}
             <AccessibilityToolbar />

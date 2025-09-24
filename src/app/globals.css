@@ -667,3 +667,198 @@ button, .cta {
   }
 }
 
+/* ===== FINAL REFINEMENTS ===== */
+
+/* Rotation Orders */
+.venue-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* Order 1: Madison, Sixth, Barclay */
+.order-1 .venue-madison { order: 1; }
+.order-1 .venue-sixth { order: 2; }
+.order-1 .venue-barclay { order: 3; }
+
+/* Order 2: Barclay, Madison, Sixth */
+.order-2 .venue-barclay { order: 1; }
+.order-2 .venue-madison { order: 2; }
+.order-2 .venue-sixth { order: 3; }
+
+/* Order 3: Sixth, Barclay, Madison */
+.order-3 .venue-sixth { order: 1; }
+.order-3 .venue-barclay { order: 2; }
+.order-3 .venue-madison { order: 3; }
+
+/* Fade In Animations */
+.fade-in-section {
+    opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero Section Improvements */
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-title {
+  font-size: clamp(3.5rem, 8vw, 6.5rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+/* Hero Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-content > * {
+  animation: fadeInUp 0.8s ease-out backwards;
+}
+
+.hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+.hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+
+/* Enhanced Section Spacing */
+section {
+  padding: 6rem 0;
+}
+
+/* Image Gallery Improvements */
+.gallery-main-image {
+  border-radius: 0;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.gallery-thumbnail {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.gallery-thumbnail:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* CTA Button Effects */
+.cta-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cta-button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(201, 169, 97, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.cta-button:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Timeline Visual Improvements */
+.timeline {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, transparent, #C9A961, transparent);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.25rem;
+  top: 0.5rem;
+  width: 10px;
+  height: 10px;
+  background: #C9A961;
+  border-radius: 50%;
+}
+
+/* Enhanced Mobile Experience */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.75rem;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+    padding: 0 1rem;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 2rem;
+  }
+  
+  .hero-buttons button {
+    width: 100%;
+  }
+  
+  .gallery-thumbnails {
+    display: flex;
+    gap: 0.5rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .gallery-thumbnails::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .venue-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .visit-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Touch-friendly tap targets */
+button, a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+

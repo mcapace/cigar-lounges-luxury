@@ -4,7 +4,11 @@ import { motion } from 'framer-motion';
 import { MapPin, Award } from 'lucide-react';
 import { venueData } from '@/data/venues';
 
-export function VenueShowcase() {
+interface VenueShowcaseProps {
+  venueOrder?: string;
+}
+
+export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
   const davidoffBrand = venueData.brands.find(b => b.id === 'davidoff');
   const barclayRexBrand = venueData.brands.find(b => b.id === 'barclay-rex');
   
@@ -15,12 +19,12 @@ export function VenueShowcase() {
           Select Your Experience
         </h2>
         
-        {/* Grid with proper cards for all venues */}
-        <div className="grid md:grid-cols-2 gap-16 max-w-6xl mx-auto">
+        {/* Venue container with rotation */}
+        <div className={`venue-container ${venueOrder}`}>
           
-          {/* Davidoff Card (covers both locations) */}
+          {/* Davidoff Madison Card */}
           <motion.div 
-            className="bg-white border border-gray-200 p-10 hover:shadow-lg transition h-full flex flex-col"
+            className="venue-item venue-madison bg-white border border-gray-200 p-10 hover:shadow-lg transition h-full flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -31,18 +35,47 @@ export function VenueShowcase() {
               alt="Davidoff"
               className="h-10 mb-6 object-contain"
             />
-            <h3 className="text-2xl font-normal mb-4 text-charcoal">Davidoff of Geneva</h3>
+            <h3 className="text-2xl font-normal mb-4 text-charcoal">Davidoff Madison Avenue</h3>
             <p className="text-gray-600 mb-6 body-text">
-              Experience Swiss excellence at two distinguished Manhattan locations
+              The flagship experience on Madison Avenue - North America's premier Davidoff destination
             </p>
-            <div className="space-y-4 mb-8 flex-grow">
-              <div className="pb-4 border-b border-gray-100">
-                <h4 className="font-medium mb-2 text-charcoal">Madison Avenue</h4>
-                <p className="text-sm text-gray-600">The Flagship Experience</p>
+            <div className="mb-8 flex-grow">
+              <div className="pb-4">
+                <h4 className="font-medium mb-2 text-charcoal">Flagship Features</h4>
+                <p className="text-sm text-gray-600">Exclusive limited editions, private lockers, white glove service</p>
               </div>
-              <div>
-                <h4 className="font-medium mb-2 text-charcoal">6th Avenue</h4>
-                <p className="text-sm text-gray-600">Downtown Sophistication</p>
+            </div>
+            <a 
+              href="https://davidoff.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-6 py-3 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium text-center w-full"
+            >
+              Visit Davidoff Website →
+            </a>
+          </motion.div>
+          
+          {/* Davidoff 6th Avenue Card */}
+          <motion.div 
+            className="venue-item venue-sixth bg-white border border-gray-200 p-10 hover:shadow-lg transition h-full flex flex-col"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+          >
+            <img 
+              src="/images/Davidoff Logo.png" 
+              alt="Davidoff"
+              className="h-10 mb-6 object-contain"
+            />
+            <h3 className="text-2xl font-normal mb-4 text-charcoal">Davidoff 6th Avenue</h3>
+            <p className="text-gray-600 mb-6 body-text">
+              Downtown sophistication - where Swiss tradition meets Manhattan energy
+            </p>
+            <div className="mb-8 flex-grow">
+              <div className="pb-4">
+                <h4 className="font-medium mb-2 text-charcoal">Contemporary Features</h4>
+                <p className="text-sm text-gray-600">Extended hours, full bar, master classes, tasting events</p>
               </div>
             </div>
             <a 
@@ -57,7 +90,7 @@ export function VenueShowcase() {
           
           {/* Barclay Rex Card */}
           <motion.div 
-            className="bg-white border border-gray-200 p-10 hover:shadow-lg transition h-full flex flex-col"
+            className="venue-item venue-barclay bg-white border border-gray-200 p-10 hover:shadow-lg transition h-full flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
