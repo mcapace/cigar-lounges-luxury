@@ -51,7 +51,7 @@ export function RefinedNavigation() {
             {/* Right: Visit Links */}
             <div className="hidden lg:flex items-center space-x-4">
               <motion.a 
-                href="https://davidoff.com"
+                    href="https://us.davidoffgeneva.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 text-sm font-medium text-charcoal hover:text-gold transition-all duration-300"
@@ -60,7 +60,7 @@ export function RefinedNavigation() {
                 Visit Davidoff
               </motion.a>
               <motion.a 
-                href="https://barclayrex.com"
+                    href="https://barclayrex.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 text-sm font-medium text-charcoal hover:text-gold transition-all duration-300"

@@ -27,12 +27,12 @@ export function Footer() {
             <h4 className="text-lg font-medium mb-6 text-charcoal">Davidoff of Geneva</h4>
             <ul className="space-y-3 text-sm text-gray-600">
               <li>
-                <a href="https://davidoff.com" className="hover:text-gold transition-colors">
+                <a href="https://us.davidoffgeneva.com/" className="hover:text-gold transition-colors">
                   Madison Avenue Flagship
                 </a>
               </li>
               <li>
-                <a href="https://davidoff.com" className="hover:text-gold transition-colors">
+                <a href="https://us.davidoffgeneva.com/" className="hover:text-gold transition-colors">
                   6th Avenue Location
                 </a>
               </li>
@@ -45,7 +45,7 @@ export function Footer() {
             <h4 className="text-lg font-medium mb-6 text-charcoal">Barclay Rex</h4>
             <ul className="space-y-3 text-sm text-gray-600">
               <li>
-                <a href="https://barclayrex.com" className="hover:text-gold transition-colors">
+                <a href="https://barclayrex.com/" className="hover:text-gold transition-colors">
                   Wall Street Location
                 </a>
               </li>

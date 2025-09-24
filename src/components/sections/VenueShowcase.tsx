@@ -46,7 +46,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
               </div>
             </div>
             <a 
-              href="https://davidoff.com"
+              href="https://us.davidoffgeneva.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-gradient-to-r from-charcoal to-gray-700 text-white hover:from-gold hover:to-gold-dark transition-all duration-300 font-medium text-center w-full shadow-md hover:shadow-lg"
@@ -79,7 +79,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
               </div>
             </div>
             <a 
-              href="https://davidoff.com"
+              href="https://us.davidoffgeneva.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-gradient-to-r from-charcoal to-gray-700 text-white hover:from-gold hover:to-gold-dark transition-all duration-300 font-medium text-center w-full shadow-md hover:shadow-lg"
@@ -113,7 +113,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
               </div>
             </div>
             <a 
-              href="https://barclayrex.com"
+              href="https://barclayrex.com/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block px-6 py-3 bg-gradient-to-r from-charcoal to-gray-700 text-white hover:from-gold hover:to-gold-dark transition-all duration-300 font-medium text-center w-full shadow-md hover:shadow-lg"
