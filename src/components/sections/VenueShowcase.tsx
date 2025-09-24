@@ -19,12 +19,12 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
           Select Your Experience
         </h2>
         
-        {/* Venue container with rotation */}
+        {/* Venue container with rotation - 3 column grid */}
         <div className={`venue-container ${venueOrder}`}>
           
           {/* Davidoff Madison Card */}
           <motion.div 
-            className="venue-item venue-madison bg-white border border-gray-200 p-10 hover:shadow-lg transition h-full flex flex-col"
+            className="venue-item venue-madison bg-white border border-gray-200 p-6 hover:shadow-lg transition h-full flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -57,7 +57,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
           
           {/* Davidoff 6th Avenue Card */}
           <motion.div 
-            className="venue-item venue-sixth bg-white border border-gray-200 p-10 hover:shadow-lg transition h-full flex flex-col"
+            className="venue-item venue-sixth bg-white border border-gray-200 p-6 hover:shadow-lg transition h-full flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -90,7 +90,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
           
           {/* Barclay Rex Card */}
           <motion.div 
-            className="venue-item venue-barclay bg-white border border-gray-200 p-10 hover:shadow-lg transition h-full flex flex-col"
+            className="venue-item venue-barclay bg-white border border-gray-200 p-6 hover:shadow-lg transition h-full flex flex-col"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}

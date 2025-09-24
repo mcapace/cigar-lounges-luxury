@@ -671,9 +671,19 @@ button, .cta {
 
 /* Rotation Orders - Venue Cards */
 .venue-container {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  max-width: 7xl;
+  margin: 0 auto;
+}
+
+/* Mobile: Stack vertically */
+@media (max-width: 768px) {
+  .venue-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 /* Order 1: Madison, Sixth, Barclay */
