@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, MapPin, Phone, Clock, Star, Award, Building2, Users } from 'lucide-react';
 import { venueData } from '@/data/venues';
 
 export function VisitPlanning() {
@@ -36,17 +36,17 @@ export function VisitPlanning() {
               className="h-12 mb-6 object-contain" 
             />
             <h3 className="text-xl font-medium mb-4 text-charcoal">{davidoffMadison.name}</h3>
-            <div className="space-y-2 text-gray-600 body-text">
-              <p className="flex items-start gap-2">
-                <span>📍</span>
+            <div className="space-y-3 text-gray-600 body-text">
+              <p className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                 <span>{davidoffMadison.address}</span>
               </p>
-              <p className="flex items-center gap-2">
-                <span>📞</span>
+              <p className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-gold flex-shrink-0" />
                 <span>{davidoffMadison.phone}</span>
               </p>
-              <p className="flex items-start gap-2">
-                <span>🕐</span>
+              <p className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                 <span>Mon-Sat: 10AM-8PM, Sun: 12PM-6PM</span>
               </p>
             </div>
@@ -76,17 +76,17 @@ export function VisitPlanning() {
               className="h-12 mb-6 object-contain" 
             />
             <h3 className="text-xl font-medium mb-4 text-charcoal">{barclayRex.name}</h3>
-            <div className="space-y-2 text-gray-600 body-text">
-              <p className="flex items-start gap-2">
-                <span>📍</span>
+            <div className="space-y-3 text-gray-600 body-text">
+              <p className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                 <span>{barclayRex.address}</span>
               </p>
-              <p className="flex items-center gap-2">
-                <span>📞</span>
+              <p className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-gold flex-shrink-0" />
                 <span>{barclayRex.phone}</span>
               </p>
-              <p className="flex items-start gap-2">
-                <span>🕐</span>
+              <p className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                 <span>Mon-Fri: 8AM-7PM, Sat: 10AM-6PM, Sun: Closed</span>
               </p>
             </div>
@@ -116,17 +116,17 @@ export function VisitPlanning() {
               className="h-12 mb-6 object-contain" 
             />
             <h3 className="text-xl font-medium mb-4 text-charcoal">{davidoffSixth.name}</h3>
-            <div className="space-y-2 text-gray-600 body-text">
-              <p className="flex items-start gap-2">
-                <span>📍</span>
+            <div className="space-y-3 text-gray-600 body-text">
+              <p className="flex items-start gap-3">
+                <MapPin className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                 <span>{davidoffSixth.address}</span>
               </p>
-              <p className="flex items-center gap-2">
-                <span>📞</span>
+              <p className="flex items-center gap-3">
+                <Phone className="w-5 h-5 text-gold flex-shrink-0" />
                 <span>{davidoffSixth.phone}</span>
               </p>
-              <p className="flex items-start gap-2">
-                <span>🕐</span>
+              <p className="flex items-start gap-3">
+                <Clock className="w-5 h-5 text-gold mt-0.5 flex-shrink-0" />
                 <span>Mon-Fri: 10AM-9PM, Sat-Sun: 11AM-8PM</span>
               </p>
             </div>

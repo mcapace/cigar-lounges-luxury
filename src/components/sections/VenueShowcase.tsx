@@ -49,7 +49,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
               href="https://davidoff.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium text-center w-full"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-charcoal to-gray-700 text-white hover:from-gold hover:to-gold-dark transition-all duration-300 font-medium text-center w-full shadow-md hover:shadow-lg"
             >
               Visit Davidoff Website →
             </a>
@@ -82,7 +82,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
               href="https://davidoff.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium text-center w-full"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-charcoal to-gray-700 text-white hover:from-gold hover:to-gold-dark transition-all duration-300 font-medium text-center w-full shadow-md hover:shadow-lg"
             >
               Visit Davidoff Website →
             </a>
@@ -99,7 +99,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
             <img 
               src="/images/Barclay Rex logo.png" 
               alt="Barclay Rex"
-              className="h-10 mb-6 object-contain"
+              className="h-14 mb-6 object-contain"
             />
             <h3 className="text-2xl font-normal mb-4 text-charcoal">Barclay Rex</h3>
             <p className="text-gray-600 mb-6 body-text">
@@ -116,7 +116,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
               href="https://barclayrex.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-6 py-3 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium text-center w-full"
+              className="inline-block px-6 py-3 bg-gradient-to-r from-charcoal to-gray-700 text-white hover:from-gold hover:to-gold-dark transition-all duration-300 font-medium text-center w-full shadow-md hover:shadow-lg"
             >
               Visit Barclay Rex Website →
             </a>

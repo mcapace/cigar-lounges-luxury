@@ -102,7 +102,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
                 href={davidoffMadison.website}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="inline-flex items-center gap-2 w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button justify-center"
+                className="inline-flex items-center gap-2 w-full md:w-auto px-8 py-4 bg-gradient-to-r from-charcoal to-gray-700 text-white hover:from-gold hover:to-gold-dark transition-all luxury-button justify-center shadow-lg hover:shadow-xl"
               >
                 Visit Davidoff Madison
                 <ExternalLink className="w-4 h-4" />
@@ -179,7 +179,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
                 href={davidoffSixth.website}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="inline-flex items-center gap-2 w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button justify-center"
+                className="inline-flex items-center gap-2 w-full md:w-auto px-8 py-4 bg-gradient-to-r from-charcoal to-gray-700 text-white hover:from-gold hover:to-gold-dark transition-all luxury-button justify-center shadow-lg hover:shadow-xl"
               >
                 Visit Davidoff 6th Avenue
                 <ExternalLink className="w-4 h-4" />
@@ -318,7 +318,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
                 href={barclayRex.website}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="inline-flex items-center gap-2 w-full md:w-auto px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all luxury-button justify-center"
+                className="inline-flex items-center gap-2 w-full md:w-auto px-8 py-4 bg-gradient-to-r from-charcoal to-gray-700 text-white hover:from-gold hover:to-gold-dark transition-all luxury-button justify-center shadow-lg hover:shadow-xl"
               >
                 Visit Barclay Rex
                 <ExternalLink className="w-4 h-4" />
@@ -337,7 +337,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
               alt="Barclay Rex" 
               width={200}
               height={60}
-              className="h-12 mx-auto mb-8 object-contain"
+              className="h-16 mx-auto mb-8 object-contain"
               style={{ maxWidth: '200px' }}
             />
             <h2 className="text-4xl font-normal text-charcoal">113 Years on Wall Street</h2>

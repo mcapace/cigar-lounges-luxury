@@ -29,27 +29,17 @@ export function HeroSection() {
           </MagneticHover>
         </AdvancedMotion>
         
-        {/* Large, elegant headline with text reveal */}
-        <div className="mb-16">
-          <AdvancedMotion variant="slide" direction="up" distance={80} delay={0.4}>
-            <h1 className="hero-title text-charcoal mb-8 font-display-optimized leading-normal">
-              <TextReveal delay={0.6}>
-                Three Distinguished
-              </TextReveal>
-            </h1>
-          </AdvancedMotion>
-          
-          <AdvancedMotion variant="scale" delay={0.8}>
-            <motion.span 
-              className="hero-subtitle block text-gold gradient-text leading-tight"
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, delay: 1, ease: [0.25, 0.46, 0.45, 0.94] }}
-            >
-              Destinations
-            </motion.span>
-          </AdvancedMotion>
-        </div>
+            {/* Large, elegant headline as one cohesive title */}
+            <div className="mb-16">
+              <AdvancedMotion variant="slide" direction="up" distance={80} delay={0.4}>
+                <h1 className="hero-title text-charcoal font-display-optimized leading-tight">
+                  <TextReveal delay={0.6}>
+                    Three Distinguished{' '}
+                    <span className="text-gold italic font-serif">Destinations</span>
+                  </TextReveal>
+                </h1>
+              </AdvancedMotion>
+            </div>
         
         {/* Refined subtext */}
         <AdvancedMotion variant="fade" delay={1.2} className="mb-16">
@@ -72,7 +62,7 @@ export function HeroSection() {
             <img 
               src="/images/Barclay Rex logo.png" 
               alt="Barclay Rex"
-              className="h-14 object-contain"
+              className="h-18 object-contain"
             />
           </div>
         </AdvancedMotion>
@@ -80,20 +70,20 @@ export function HeroSection() {
         {/* Enhanced CTAs */}
         <AdvancedMotion variant="slide" direction="up" distance={40} delay={1.6}>
           <div className="flex gap-6 justify-center">
-            <motion.button 
-              className="px-8 py-4 bg-charcoal text-white hover:bg-gold transition-all duration-300 font-medium tracking-wide"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Explore Their Stories
-            </motion.button>
-            <motion.button 
-              className="px-8 py-4 border border-charcoal text-charcoal hover:bg-charcoal hover:text-white transition-all duration-300 font-medium tracking-wide"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Visit Their Locations
-            </motion.button>
+                <motion.button
+                  className="px-8 py-4 bg-gradient-to-r from-charcoal to-gray-700 text-white hover:from-gold hover:to-gold-dark transition-all duration-300 font-medium tracking-wide shadow-lg hover:shadow-xl"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Explore Their Stories
+                </motion.button>
+                <motion.button
+                  className="px-8 py-4 border-2 border-gold text-gold hover:bg-gold hover:text-white transition-all duration-300 font-medium tracking-wide shadow-md hover:shadow-lg"
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Visit Their Locations
+                </motion.button>
           </div>
         </AdvancedMotion>
       </div>
