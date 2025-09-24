@@ -2,13 +2,12 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronDown, Menu, X } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
 
 export function RefinedNavigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDavidoffDropdownOpen, setIsDavidoffDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -44,64 +43,9 @@ export function RefinedNavigation() {
               />
             </div>
             
-            {/* Center: Navigation Links */}
-            <div className="hidden lg:flex items-center justify-center space-x-12">
-              <div className="relative group">
-                <motion.button 
-                  className="flex items-center gap-2 text-charcoal hover:text-gold transition-all duration-300 font-normal text-lg tracking-wide"
-                  onMouseEnter={() => setIsDavidoffDropdownOpen(true)}
-                  onMouseLeave={() => setIsDavidoffDropdownOpen(false)}
-                  whileHover={{ y: -2 }}
-                >
-                  Davidoff
-                  <motion.div
-                    animate={{ rotate: isDavidoffDropdownOpen ? 180 : 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <ChevronDown className="w-4 h-4" />
-                  </motion.div>
-                </motion.button>
-                
-                {/* Elegant Dropdown */}
-                <AnimatePresence>
-                  {isDavidoffDropdownOpen && (
-                    <motion.div 
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white/95 backdrop-blur-xl shadow-2xl p-6 min-w-[280px] border border-light-gray/30 z-50"
-                      initial={{ opacity: 0, y: -10, scale: 0.95 }}
-                      animate={{ opacity: 1, y: 0, scale: 1 }}
-                      exit={{ opacity: 0, y: -10, scale: 0.95 }}
-                      transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
-                      onMouseEnter={() => setIsDavidoffDropdownOpen(true)}
-                      onMouseLeave={() => setIsDavidoffDropdownOpen(false)}
-                    >
-                      <div className="space-y-3">
-                        <a 
-                          href="#davidoff-madison" 
-                          className="block py-3 px-4 hover:bg-gold/10 hover:text-gold transition-all duration-300 rounded-lg group"
-                        >
-                          <div className="font-medium">Madison Avenue</div>
-                          <div className="text-xs text-medium-gray">Flagship Experience</div>
-                        </a>
-                        <a 
-                          href="#davidoff-sixth" 
-                          className="block py-3 px-4 hover:bg-gold/10 hover:text-gold transition-all duration-300 rounded-lg group"
-                        >
-                          <div className="font-medium">6th Avenue</div>
-                          <div className="text-xs text-medium-gray">Downtown Sophistication</div>
-                        </a>
-                      </div>
-                    </motion.div>
-                  )}
-                </AnimatePresence>
-              </div>
-              
-              <motion.a 
-                href="#barclay-rex" 
-                className="text-charcoal hover:text-gold transition-all duration-300 font-normal text-lg tracking-wide"
-                whileHover={{ y: -2 }}
-              >
-                Barclay Rex
-              </motion.a>
+            {/* Center: Empty space for balance */}
+            <div className="hidden lg:flex items-center justify-center">
+              {/* Navigation links removed as requested */}
             </div>
             
             {/* Right: Visit Links */}
@@ -187,25 +131,10 @@ export function RefinedNavigation() {
             >
               <div className="space-y-12">
                 
-                {/* Navigation Links */}
-                <div className="space-y-8">
-                  <motion.a 
-                    href="#davidoff-madison" 
-                    className="block text-2xl font-medium text-charcoal hover:text-gold transition-all duration-300"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    Davidoff
-                  </motion.a>
-                  <motion.a 
-                    href="#barclay-rex" 
-                    className="block text-2xl font-medium text-charcoal hover:text-gold transition-all duration-300"
-                    onClick={() => setIsMobileMenuOpen(false)}
-                    whileHover={{ scale: 1.05 }}
-                  >
-                    Barclay Rex
-                  </motion.a>
-                </div>
+                    {/* Navigation Links Removed */}
+                    <div className="space-y-8">
+                      {/* Navigation links removed as requested */}
+                    </div>
 
                 {/* Reserve CTA */}
                 <motion.button
