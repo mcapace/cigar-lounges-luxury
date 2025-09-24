@@ -44,14 +44,14 @@ export function BarclayRexHeritage({ fullRotation = 'rotation-0' }: BarclayRexHe
             className="h-12 mx-auto mb-8 object-contain"
             style={{ maxWidth: '200px' }}
           />
-          <h2 className="text-4xl font-normal text-charcoal">113 Years on Wall Street</h2>
+          <h2 className="text-4xl font-normal text-charcoal">115 Years on Wall Street</h2>
           <div className="w-20 h-px bg-gold mx-auto mt-6"></div>
         </div>
         
         {/* Introduction */}
         <div className="max-w-4xl mx-auto mb-16 text-center">
           <p className="text-lg text-medium-gray body-text">
-            For 113 years, Barclay Rex has stood as Wall Street's tobacconist. 
+            For 115 years, Barclay Rex has stood as Wall Street's tobacconist. 
             Four generations of the Nastri family have preserved traditions while 
             serving everyone from Morgan partners to modern entrepreneurs.
           </p>

@@ -301,7 +301,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
                   </p>
                   <p className="flex items-center gap-2">
                     <Clock className="w-4 h-4" />
-                    Mon-Fri: 8AM-7PM | Sat: 10AM-6PM | Sun: Closed
+                    Mon-Fri: 10AM-8PM | Sat-Sun: 11AM-7PM
                   </p>
                 </div>
               </div>
@@ -332,14 +332,14 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
               className="h-16 mx-auto mb-8 object-contain"
               style={{ maxWidth: '200px' }}
             />
-            <h2 className="text-4xl font-normal text-charcoal">113 Years on Wall Street</h2>
+            <h2 className="text-4xl font-normal text-charcoal">115 Years on Wall Street</h2>
             <div className="w-20 h-px bg-gold mx-auto mt-6"></div>
           </div>
           
           {/* Introduction */}
           <div className="max-w-4xl mx-auto mb-16 text-center">
             <p className="text-lg text-medium-gray body-text">
-              For 113 years, Barclay Rex has stood as Wall Street's tobacconist. 
+              For 115 years, Barclay Rex has stood as Wall Street's tobacconist. 
               Founded by Vincent Nastri, a pipe maker from Salerno, Italy, the store 
               was named after its original location between Barclay and Church Streets 
               and Vincent's faithful Great Dane, Rex. Four generations of the Nastri 

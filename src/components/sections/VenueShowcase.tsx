@@ -108,7 +108,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
             <div className="mb-8 flex-grow">
               <div className="pb-4">
                 <h4 className="font-medium mb-2 text-charcoal">Wall Street</h4>
-                <p className="text-sm text-gray-600">113 Years of Tradition</p>
+                <p className="text-sm text-gray-600">115 Years of Tradition</p>
                 <p className="text-sm text-gray-600 mt-2">Family-owned heritage</p>
               </div>
             </div>

@@ -71,7 +71,7 @@ export function HeroSection() {
           <p className="body-text text-xl text-medium-gray max-w-3xl mx-auto leading-relaxed">
             An exclusive partnership showcasing New York's most storied cigar establishments. 
             From Davidoff's Swiss excellence across two Manhattan locations to 
-            Barclay Rex's 113-year Wall Street legacy.
+            Barclay Rex's 115-year Wall Street legacy.
           </p>
         </AdvancedMotion>
         

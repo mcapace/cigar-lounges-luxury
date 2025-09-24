@@ -86,7 +86,7 @@ export function VenuePageClient({ venueId }: VenuePageClientProps) {
               <div className="max-w-4xl mx-auto px-4">
                 <div className="text-center mb-16">
                   <h2 className="text-4xl lg:text-5xl font-bold text-luxury-cream mb-6">
-                    <span className="gradient-text">113 Years</span> of Heritage
+                    <span className="gradient-text">115 Years</span> of Heritage
                   </h2>
                   <p className="text-xl text-luxury-cream/70 max-w-3xl mx-auto">
                     From Vincent Nastri's vision in 1910 to today's fourth generation, 
