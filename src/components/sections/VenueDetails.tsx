@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { venueData } from '@/data/venues';
-import { MapPin, Phone, Clock, Star, ExternalLink } from 'lucide-react';
+import { MapPin, Phone, Clock, Star, ExternalLink, Users } from 'lucide-react';
 import { SimpleImageGallery } from '@/components/ui/SimpleImageGallery';
 
 interface TimelineItemProps {
@@ -299,10 +299,22 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
                     <Phone className="w-4 h-4" />
                     {barclayRex.phone}
                   </p>
-                  <p className="flex items-center gap-2">
-                    <Clock className="w-4 h-4" />
-                    Mon-Fri: 10AM-8PM | Sat-Sun: 11AM-7PM
-                  </p>
+                  <div className="space-y-2">
+                    <p className="flex items-start gap-2">
+                      <Clock className="w-4 h-4 mt-0.5" />
+                      <div>
+                        <div className="text-sm font-medium text-charcoal">Store Hours:</div>
+                        <div className="text-sm">Mon-Fri: 10AM-8PM, Sat-Sun: 11AM-7PM</div>
+                      </div>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <Users className="w-4 h-4 mt-0.5" />
+                      <div>
+                        <div className="text-sm font-medium text-charcoal">Club Hours:</div>
+                        <div className="text-sm">Mon-Fri: 11AM-1AM, Sat: 2PM-12AM, Sun: 1PM-11PM</div>
+                      </div>
+                    </p>
+                  </div>
                 </div>
               </div>
               
