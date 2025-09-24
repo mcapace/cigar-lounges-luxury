@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { AdvancedMotion, MagneticHover, TextReveal } from '@/components/animations/AdvancedMotion';
 
 export function HeroSection() {
 
@@ -12,46 +11,61 @@ export function HeroSection() {
       <div className="container mx-auto px-8 text-center max-w-6xl relative z-10">
         
         {/* Cigar Aficionado Logo */}
-        <AdvancedMotion variant="fade" delay={0.2} className="mb-8">
-          <MagneticHover>
-            <div className="flex justify-center mb-6">
-              <Image
-                src="/images/cigar_aficionado_logo.png"
-                alt="Cigar Aficionado"
-                width={240}
-                height={72}
-                className="h-14 w-auto"
-              />
-            </div>
-            <span className="text-xs tracking-[0.3em] text-medium-gray uppercase font-light">
-              Cigar Aficionado Select Partners
-            </span>
-          </MagneticHover>
-        </AdvancedMotion>
+        <motion.div 
+          className="mb-8"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+        >
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/images/cigar_aficionado_logo.png"
+              alt="Cigar Aficionado"
+              width={240}
+              height={72}
+              className="h-14 w-auto"
+            />
+          </div>
+          <span className="text-xs tracking-[0.3em] text-medium-gray uppercase font-light">
+            Cigar Aficionado Select Partners
+          </span>
+        </motion.div>
         
             {/* Large, elegant headline as one cohesive title */}
             <div className="mb-16">
-              <AdvancedMotion variant="slide" direction="up" distance={80} delay={0.4}>
+              <motion.div
+                initial={{ opacity: 0, y: 80 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4, duration: 0.8 }}
+              >
                 <h1 className="hero-title text-charcoal font-display-optimized leading-tight">
-                  <TextReveal delay={0.6}>
-                    Three Distinguished{' '}
-                    <span className="text-gold italic font-serif">Destinations</span>
-                  </TextReveal>
+                  Three Distinguished{' '}
+                  <span className="text-gold italic font-serif">Destinations</span>
                 </h1>
-              </AdvancedMotion>
+              </motion.div>
             </div>
         
         {/* Refined subtext */}
-        <AdvancedMotion variant="fade" delay={1.2} className="mb-16">
+        <motion.div 
+          className="mb-16"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2 }}
+        >
           <p className="body-text text-xl text-medium-gray max-w-3xl mx-auto leading-relaxed">
             An exclusive partnership showcasing New York's most storied cigar establishments. 
             From Davidoff's Swiss excellence across two Manhattan locations to 
             Barclay Rex's 113-year Wall Street legacy.
           </p>
-        </AdvancedMotion>
+        </motion.div>
         
         {/* Show all three partner logos */}
-        <AdvancedMotion variant="fade" delay={1.4} className="mb-12">
+        <motion.div 
+          className="mb-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.4 }}
+        >
           <div className="flex items-center justify-center gap-16">
             <img 
               src="/images/Davidoff Logo.png" 
@@ -65,11 +79,15 @@ export function HeroSection() {
               className="h-18 object-contain"
             />
           </div>
-        </AdvancedMotion>
+        </motion.div>
         
         {/* Enhanced CTAs */}
-        <AdvancedMotion variant="slide" direction="up" distance={40} delay={1.6}>
-          <div className="flex gap-6 justify-center">
+        <motion.div 
+          className="flex gap-6 justify-center"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.6 }}
+        >
                 <motion.button
                   className="px-8 py-4 bg-gradient-to-r from-charcoal to-gray-700 text-white hover:from-gold hover:to-gold-dark transition-all duration-300 font-medium tracking-wide shadow-lg hover:shadow-xl"
                   whileHover={{ scale: 1.05, y: -2 }}
@@ -84,8 +102,7 @@ export function HeroSection() {
                 >
                   Visit Their Locations
                 </motion.button>
-          </div>
-        </AdvancedMotion>
+        </motion.div>
       </div>
     </section>
   );

@@ -4,9 +4,9 @@ import Image from 'next/image';
 
 export function Footer() {
   return (
-    <footer className="bg-cream py-20 border-t border-light-gray">
+    <footer className="bg-cream py-12 border-t border-light-gray">
       <div className="container mx-auto px-8 max-w-7xl">
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
+        <div className="grid md:grid-cols-4 gap-8 mb-8">
           
           {/* Cigar Aficionado Column */}
           <div className="md:col-span-1">
@@ -15,7 +15,7 @@ export function Footer() {
               alt="Cigar Aficionado"
               width={200}
               height={60}
-              className="h-16 mb-6"
+              className="h-12 mb-4"
             />
             <p className="text-sm text-gray-600 leading-relaxed">
               Curating exceptional cigar experiences since 1992
@@ -24,7 +24,7 @@ export function Footer() {
           
           {/* Davidoff Column */}
           <div className="md:col-span-1">
-            <h4 className="text-lg font-medium mb-6 text-charcoal">Davidoff of Geneva</h4>
+            <h4 className="text-lg font-medium mb-4 text-charcoal">Davidoff of Geneva</h4>
             <ul className="space-y-3 text-sm text-gray-600">
               <li>
                 <a href="https://us.davidoffgeneva.com/" className="hover:text-gold transition-colors">
@@ -42,7 +42,7 @@ export function Footer() {
           
           {/* Barclay Rex Column */}
           <div className="md:col-span-1">
-            <h4 className="text-lg font-medium mb-6 text-charcoal">Barclay Rex</h4>
+            <h4 className="text-lg font-medium mb-4 text-charcoal">Barclay Rex</h4>
             <ul className="space-y-3 text-sm text-gray-600">
               <li>
                 <a href="https://barclayrex.com/" className="hover:text-gold transition-colors">
@@ -56,7 +56,7 @@ export function Footer() {
           
           {/* Contact Column */}
           <div className="md:col-span-1">
-            <h4 className="text-lg font-medium mb-6 text-charcoal">Visit</h4>
+            <h4 className="text-lg font-medium mb-4 text-charcoal">Visit</h4>
             <p className="text-sm text-gray-600 leading-relaxed">
               For reservations and current offerings, 
               please visit each venue's website
@@ -65,7 +65,7 @@ export function Footer() {
         </div>
         
         {/* Footer Bottom */}
-        <div className="pt-8 border-t border-gray-300 text-center">
+        <div className="pt-6 border-t border-gray-300 text-center">
           <p className="text-sm text-gray-500 mb-2">© 2025 Cigar Aficionado. Partner content.</p>
           <p className="text-xs text-gray-400">
             Featuring: Davidoff Madison Avenue • Davidoff 6th Avenue • Barclay Rex Wall Street
