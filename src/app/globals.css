@@ -669,7 +669,7 @@ button, .cta {
 
 /* ===== FINAL REFINEMENTS ===== */
 
-/* Rotation Orders */
+/* Rotation Orders - Venue Cards */
 .venue-container {
   display: flex;
   flex-direction: column;
@@ -690,6 +690,45 @@ button, .cta {
 .order-3 .venue-sixth { order: 1; }
 .order-3 .venue-barclay { order: 2; }
 .order-3 .venue-madison { order: 3; }
+
+/* Full Venue Sections Rotation */
+.venues-sections-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* Rotation 0: Madison, Sixth, Barclay */
+.rotation-0 .madison-section { order: 1; }
+.rotation-0 .sixth-section { order: 2; }
+.rotation-0 .barclay-section { order: 3; }
+
+/* Rotation 1: Barclay, Madison, Sixth */
+.rotation-1 .barclay-section { order: 1; }
+.rotation-1 .madison-section { order: 2; }
+.rotation-1 .sixth-section { order: 3; }
+
+/* Rotation 2: Sixth, Barclay, Madison */
+.rotation-2 .sixth-section { order: 1; }
+.rotation-2 .barclay-section { order: 2; }
+.rotation-2 .madison-section { order: 3; }
+
+/* Heritage Sections Rotation */
+.heritage-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+/* Heritage rotation follows venue rotation */
+.rotation-0 .davidoff-heritage { order: 1; }
+.rotation-0 .barclay-heritage { order: 2; }
+
+.rotation-1 .barclay-heritage { order: 1; }
+.rotation-1 .davidoff-heritage { order: 2; }
+
+.rotation-2 .davidoff-heritage { order: 1; }
+.rotation-2 .barclay-heritage { order: 2; }
 
 /* Fade In Animations */
 .fade-in-section {

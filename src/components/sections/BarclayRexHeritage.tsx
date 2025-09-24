@@ -26,9 +26,14 @@ function TimelineItem({ year, text }: TimelineItemProps) {
   );
 }
 
-export function BarclayRexHeritage() {
+interface BarclayRexHeritageProps {
+  fullRotation?: string;
+}
+
+export function BarclayRexHeritage({ fullRotation = 'rotation-0' }: BarclayRexHeritageProps) {
   return (
-    <section className="py-20 bg-cream">
+    <div className={`heritage-container ${fullRotation}`}>
+      <section className="barclay-heritage py-20 bg-cream">
       <div className="container mx-auto px-8 max-w-6xl">
         <div className="text-center mb-12">
           <Image 
@@ -152,5 +157,6 @@ export function BarclayRexHeritage() {
         </motion.div>
       </div>
     </section>
+    </div>
   );
 }

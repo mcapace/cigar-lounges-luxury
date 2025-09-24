@@ -28,20 +28,26 @@ if (typeof window !== 'undefined') {
 
 export default function Home() {
   const [venueOrder, setVenueOrder] = useState('order-1');
+  const [fullRotation, setFullRotation] = useState('rotation-0');
   
   useEffect(() => {
     // Only run on client
     if (typeof window !== 'undefined') {
-      // Get current date-based rotation (changes daily)
-      const dayOfYear = Math.floor((Date.now() - new Date(new Date().getFullYear(), 0, 0).getTime()) / 86400000);
-      const orderIndex = dayOfYear % 3;
+      // FOR TESTING: Use URL parameter to force rotation
+      const urlParams = new URLSearchParams(window.location.search);
+      const testRotation = urlParams.get('rotation');
+      
+      // Use test rotation if provided, otherwise use date-based
+      const today = new Date().getDate(); // Day of month (1-31)
+      const orderIndex = testRotation !== null 
+        ? parseInt(testRotation) % 3
+        : today % 3;
+      
       setVenueOrder(`order-${orderIndex + 1}`);
+      setFullRotation(`rotation-${orderIndex}`);
       
-      // For testing - uncomment this line and comment the above for random rotation on each page load:
-      // const orderIndex = Math.floor(Math.random() * 3);
-      // setVenueOrder(`order-${orderIndex + 1}`);
-      
-      console.log(`Venue rotation: ${venueOrder} (Day ${dayOfYear} of year)`);
+      console.log(`Venue rotation: ${venueOrder} (Day ${today} of month, Index ${orderIndex})`);
+      console.log(`Test with: ?rotation=0, ?rotation=1, or ?rotation=2`);
     }
   }, [venueOrder]);
   return (
@@ -61,15 +67,15 @@ export default function Home() {
               </VenueErrorBoundary>
               
               <ErrorBoundary>
-                <DavidoffHeritage />
+                <DavidoffHeritage fullRotation={fullRotation} />
               </ErrorBoundary>
               
               <ErrorBoundary>
-                <VenueDetails />
+                <VenueDetails fullRotation={fullRotation} />
               </ErrorBoundary>
               
               <ErrorBoundary>
-                <BarclayRexHeritage />
+                <BarclayRexHeritage fullRotation={fullRotation} />
               </ErrorBoundary>
               
               <ErrorBoundary>

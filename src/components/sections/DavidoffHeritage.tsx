@@ -23,9 +23,14 @@ function TimelineItem({ year, text }: TimelineItemProps) {
   );
 }
 
-export function DavidoffHeritage() {
+interface DavidoffHeritageProps {
+  fullRotation?: string;
+}
+
+export function DavidoffHeritage({ fullRotation = 'rotation-0' }: DavidoffHeritageProps) {
   return (
-    <section className="py-20 bg-white">
+    <div className={`heritage-container ${fullRotation}`}>
+      <section className="davidoff-heritage py-20 bg-white">
       <div className="container mx-auto px-8 max-w-6xl">
         <div className="text-center mb-12">
           <Image 
@@ -161,5 +166,6 @@ export function DavidoffHeritage() {
         </motion.div>
       </div>
     </section>
+    </div>
   );
 }

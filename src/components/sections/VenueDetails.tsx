@@ -6,15 +6,19 @@ import { venueData } from '@/data/venues';
 import { MapPin, Phone, Clock, Star, ExternalLink } from 'lucide-react';
 import { SimpleImageGallery } from '@/components/ui/SimpleImageGallery';
 
-export function VenueDetails() {
+interface VenueDetailsProps {
+  fullRotation?: string;
+}
+
+export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps) {
   const davidoffMadison = venueData.brands[0].locations[0];
   const davidoffSixth = venueData.brands[0].locations[1];
   const barclayRex = venueData.brands[1].locations[0];
 
   return (
-    <>
+    <div className={`venues-sections-container ${fullRotation}`}>
       {/* DAVIDOFF MADISON AVENUE */}
-      <section id="davidoff-madison" className="py-20 bg-white">
+      <section id="davidoff-madison" className="madison-section py-20 bg-white">
         <div className="container mx-auto px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             
@@ -94,7 +98,7 @@ export function VenueDetails() {
       </div>
 
       {/* DAVIDOFF 6TH AVENUE */}
-      <section id="davidoff-sixth" className="py-20 bg-cream">
+      <section id="davidoff-sixth" className="sixth-section py-20 bg-cream">
         <div className="container mx-auto px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             
@@ -174,7 +178,7 @@ export function VenueDetails() {
       </div>
 
       {/* BARCLAY REX */}
-      <section id="barclay-rex" className="py-20 bg-white">
+      <section id="barclay-rex" className="barclay-section py-20 bg-white">
         <div className="container mx-auto px-8">
           <div className="grid md:grid-cols-2 gap-16 items-center max-w-7xl mx-auto">
             
@@ -257,6 +261,6 @@ export function VenueDetails() {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }
