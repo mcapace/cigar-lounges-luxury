@@ -7,7 +7,22 @@ import { AdvancedMotion, MagneticHover, TextReveal } from '@/components/animatio
 export function HeroSection() {
 
   return (
-        <section className="min-h-[90vh] bg-gradient-to-b from-white via-cream to-off-white flex items-center relative">
+        <section className="min-h-[90vh] flex items-center relative overflow-hidden">
+          {/* Video Background */}
+          <div className="absolute inset-0 w-full h-full">
+            <video
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="w-full h-full object-cover"
+            >
+              <source src="/Video/AdobeStock_181849900.mov" type="video/mp4" />
+              <source src="/Video/AdobeStock_181849900.mov" type="video/quicktime" />
+            </video>
+            {/* Overlay for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-cream/70 to-off-white/80"></div>
+          </div>
 
       <div className="container mx-auto px-8 text-center max-w-6xl relative z-10">
         
