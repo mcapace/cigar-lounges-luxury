@@ -709,34 +709,25 @@ button, .cta {
 
 /* Rotation 0: Madison, Sixth, Barclay */
 .rotation-0 .madison-section { order: 1; }
-.rotation-0 .sixth-section { order: 2; }
-.rotation-0 .barclay-section { order: 3; }
+.rotation-0 .davidoff-heritage { order: 2; }
+.rotation-0 .sixth-section { order: 3; }
+.rotation-0 .barclay-section { order: 4; }
+.rotation-0 .barclay-heritage { order: 5; }
 
 /* Rotation 1: Barclay, Madison, Sixth */
 .rotation-1 .barclay-section { order: 1; }
-.rotation-1 .madison-section { order: 2; }
-.rotation-1 .sixth-section { order: 3; }
+.rotation-1 .barclay-heritage { order: 2; }
+.rotation-1 .madison-section { order: 3; }
+.rotation-1 .davidoff-heritage { order: 4; }
+.rotation-1 .sixth-section { order: 5; }
 
 /* Rotation 2: Sixth, Barclay, Madison */
 .rotation-2 .sixth-section { order: 1; }
-.rotation-2 .barclay-section { order: 2; }
-.rotation-2 .madison-section { order: 3; }
+.rotation-2 .davidoff-heritage { order: 2; }
+.rotation-2 .barclay-section { order: 3; }
+.rotation-2 .barclay-heritage { order: 4; }
+.rotation-2 .madison-section { order: 5; }
 
-/* Heritage Sections Rotation */
-.heritage-container {
-  display: flex;
-  flex-direction: column;
-}
-
-/* Heritage rotation follows venue rotation */
-.rotation-0 .davidoff-heritage { order: 1; }
-.rotation-0 .barclay-heritage { order: 2; }
-
-.rotation-1 .barclay-heritage { order: 1; }
-.rotation-1 .davidoff-heritage { order: 2; }
-
-.rotation-2 .davidoff-heritage { order: 1; }
-.rotation-2 .barclay-heritage { order: 2; }
 
 /* Fade In Animations */
 .fade-in-section {

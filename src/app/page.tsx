@@ -6,9 +6,7 @@ import { SponsoredContentDisclosure } from '@/components/ui/SponsoredContentDisc
 import { RefinedNavigation } from '@/components/ui/RefinedNavigation';
 import { HeroSection } from '@/components/sections/HeroSection';
 import { VenueShowcase } from '@/components/sections/VenueShowcase';
-import { DavidoffHeritage } from '@/components/sections/DavidoffHeritage';
 import { VenueDetails } from '@/components/sections/VenueDetails';
-import { BarclayRexHeritage } from '@/components/sections/BarclayRexHeritage';
 import { VisitPlanning } from '@/components/sections/VisitPlanning';
 import { ScrollProgress } from '@/components/ui/ScrollProgress';
 import { ScrollToTop } from '@/components/ui/ScrollToTop';
@@ -71,15 +69,7 @@ export default function Home() {
               </VenueErrorBoundary>
               
               <ErrorBoundary>
-                <DavidoffHeritage fullRotation={fullRotation} />
-              </ErrorBoundary>
-              
-              <ErrorBoundary>
                 <VenueDetails fullRotation={fullRotation} />
-              </ErrorBoundary>
-              
-              <ErrorBoundary>
-                <BarclayRexHeritage fullRotation={fullRotation} />
               </ErrorBoundary>
               
               <ErrorBoundary>
