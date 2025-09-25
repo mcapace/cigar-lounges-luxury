@@ -28,6 +28,9 @@ export function SimpleImageGallery({ venue }: SimpleImageGalleryProps) {
       '/images/Barclay Rex/EFuerniss_KAMI_BarclayRex_7007 copy 1.jpg',
       '/images/Barclay Rex/EFuerniss_KAMI_BarclayRex_7096.jpg',
       '/images/Barclay Rex/EFuerniss_KAMI_BarclayRex_7181.jpg',
+      '/images/Barclay Rex/image1.jpeg',
+      '/images/Barclay Rex/image2.jpeg',
+      '/images/Barclay Rex/image3.jpeg',
     ]
   };
   
