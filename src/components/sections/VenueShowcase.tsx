@@ -37,12 +37,12 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
             />
             <h3 className="text-2xl font-normal mb-4 text-charcoal">Davidoff Madison Avenue</h3>
             <p className="text-gray-600 mb-6 body-text">
-              The flagship experience on Madison Avenue - North America's premier Davidoff destination
+              Globally renowned tobacconist. North America's premier cigar destination.
             </p>
             <div className="mb-8 flex-grow">
               <div className="pb-4">
                 <h4 className="font-medium mb-2 text-charcoal">Flagship Features</h4>
-                <p className="text-sm text-gray-600">Exclusive limited editions, private lockers, white glove service</p>
+                <p className="text-sm text-gray-600">World-class sales professionals, extended hours, tasting events, exclusive and rare products, private lockers.</p>
               </div>
             </div>
             <a 
@@ -70,12 +70,12 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
             />
             <h3 className="text-2xl font-normal mb-4 text-charcoal">Davidoff 6th Avenue</h3>
             <p className="text-gray-600 mb-6 body-text">
-              Downtown sophistication - where Swiss tradition meets Manhattan energy
+              Located in the heart of midtown. Sophisticated, elegant and intimate cigar experience.
             </p>
             <div className="mb-8 flex-grow">
               <div className="pb-4">
-                <h4 className="font-medium mb-2 text-charcoal">Contemporary Features</h4>
-                <p className="text-sm text-gray-600">Extended hours, full bar, master classes, tasting events</p>
+                <h4 className="font-medium mb-2 text-charcoal">Boutique Features</h4>
+                <p className="text-sm text-gray-600">Tasting events, exclusive and rare products, private lockers.</p>
               </div>
             </div>
             <a 
