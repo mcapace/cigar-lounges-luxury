@@ -124,7 +124,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
                   Davidoff 6th Avenue
                 </h2>
                 <p className="text-xl text-gold italic font-serif mb-6">
-                  Downtown Sophistication
+                  Midtown Sophistication
                 </p>
               </div>
               
