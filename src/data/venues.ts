@@ -269,6 +269,9 @@ export const venueData: { brands: Brand[] } = {
             ],
           },
           features: [
+            'Public & Private Lounge Areas',
+            'Largest Cigar Selection in NYC',
+            'Only Pipe & Pipe Tobacco Retail Store in NYC',
             'Pre-Embargo Cuban Collection',
             'Custom Blending Since 1910',
             'Historic Vault',

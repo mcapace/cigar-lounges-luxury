@@ -107,9 +107,8 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
             </p>
             <div className="mb-8 flex-grow">
               <div className="pb-4">
-                <h4 className="font-medium mb-2 text-charcoal">Wall Street</h4>
-                <p className="text-sm text-gray-600">115 Years of Tradition</p>
-                <p className="text-sm text-gray-600 mt-2">Family-owned heritage</p>
+                <h4 className="font-medium mb-2 text-charcoal">Wall Street Heritage</h4>
+                <p className="text-sm text-gray-600">Public & private lounges, largest cigar selection, only pipe tobacco store in NYC</p>
               </div>
             </div>
             <a 
