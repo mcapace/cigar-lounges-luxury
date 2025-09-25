@@ -121,7 +121,7 @@ export function DavidoffHeritage({ fullRotation = 'rotation-0' }: DavidoffHerita
           >
             <div className="mb-6">
               <h3 className="text-2xl font-normal mb-2 text-charcoal">6th Avenue</h3>
-              <p className="text-gold text-sm uppercase tracking-wider font-medium">Midtown Sophistication</p>
+              <p className="text-gold text-sm uppercase tracking-wider font-medium">Midtown</p>
             </div>
             
             <div className="prose prose-lg text-medium-gray body-text flex-grow flex flex-col">
