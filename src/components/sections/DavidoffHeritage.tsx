@@ -59,16 +59,17 @@ export function DavidoffHeritage({ fullRotation = 'rotation-0' }: DavidoffHerita
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
+              <TimelineItem year="1875" text="Max Oettinger opens first specialized cigar store in Basel Switzerland" />
               <TimelineItem year="1906" text="Zino Davidoff born in Kiev" />
               <TimelineItem year="1911" text="Family opens tobacco shop in Geneva" />
-              <TimelineItem year="1968" text="Iconic white band introduced" />
-              <TimelineItem year="1970" text="First Château series launched" />
+              <TimelineItem year="1968" text="Launch of the First White Label cigars" />
+              <TimelineItem year="1987" text="Davidoff of Geneva opens in New York City (Madison Avenue opens)" />
             </div>
             <div className="space-y-6">
-              <TimelineItem year="1990" text="Dominican production begins" />
-              <TimelineItem year="2000s" text="Madison Avenue flagship opens" />
-              <TimelineItem year="2010s" text="6th Avenue location established" />
-              <TimelineItem year="Today" text="Leading luxury cigar brand globally" />
+              <TimelineItem year="1991" text="All Davidoff cigars are produced in the Dominican Republic" />
+              <TimelineItem year="2011" text="Launch of New Retail Concept" />
+              <TimelineItem year="2013" text="Launch of the first Black label cigars (Nicaragua)" />
+              <TimelineItem year="Today" text="60 flagship stores worldwide serving cigar aficionados" />
             </div>
           </div>
         </div>
@@ -84,7 +85,7 @@ export function DavidoffHeritage({ fullRotation = 'rotation-0' }: DavidoffHerita
           >
             <div className="mb-6">
               <h3 className="text-2xl font-normal mb-2 text-charcoal">Madison Avenue</h3>
-              <p className="text-gold text-sm uppercase tracking-wider font-medium">The Flagship Experience</p>
+              <p className="text-gold text-sm uppercase tracking-wider font-medium">New York City - Midtown East</p>
             </div>
             
             <div className="prose prose-lg text-medium-gray body-text flex-grow flex flex-col">
@@ -121,7 +122,7 @@ export function DavidoffHeritage({ fullRotation = 'rotation-0' }: DavidoffHerita
           >
             <div className="mb-6">
               <h3 className="text-2xl font-normal mb-2 text-charcoal">6th Avenue</h3>
-              <p className="text-gold text-sm uppercase tracking-wider font-medium">Midtown</p>
+              <p className="text-gold text-sm uppercase tracking-wider font-medium">New York City - Midtown West</p>
             </div>
             
             <div className="prose prose-lg text-medium-gray body-text flex-grow flex flex-col">

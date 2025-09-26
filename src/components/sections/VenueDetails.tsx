@@ -52,7 +52,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
                   Davidoff Madison Avenue
                 </h2>
                 <p className="text-xl text-gold italic font-serif mb-6">
-                  The Davidoff Vault Experience
+                  New York City - Midtown East
                 </p>
               </div>
               
@@ -124,7 +124,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
                   Davidoff 6th Avenue
                 </h2>
                 <p className="text-xl text-gold italic font-serif mb-6">
-                  Midtown
+                  New York City - Midtown West
                 </p>
               </div>
               
