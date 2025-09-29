@@ -28,13 +28,13 @@ export function VisitPlanning() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-8">
               <Image 
                 src={davidoffBrand.logo} 
                 alt={davidoffBrand.name} 
-                width={120}
-                height={36}
-                className="h-16 object-contain" 
+                width={200}
+                height={60}
+                className="h-20 object-contain" 
               />
             </div>
             <h3 className="text-xl font-medium mb-4 text-charcoal">{davidoffMadison.name}</h3>
@@ -70,13 +70,13 @@ export function VisitPlanning() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-8">
               <Image 
                 src={barclayRexBrand.logo} 
                 alt={barclayRexBrand.name} 
-                width={120}
-                height={36}
-                className="h-16 object-contain" 
+                width={200}
+                height={60}
+                className="h-20 object-contain" 
               />
             </div>
             <h3 className="text-xl font-medium mb-4 text-charcoal">{barclayRex.name}</h3>
@@ -124,13 +124,13 @@ export function VisitPlanning() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-8">
               <Image 
                 src={davidoffBrand.logo} 
                 alt={davidoffBrand.name} 
-                width={120}
-                height={36}
-                className="h-16 object-contain" 
+                width={200}
+                height={60}
+                className="h-20 object-contain" 
               />
             </div>
             <h3 className="text-xl font-medium mb-4 text-charcoal">{davidoffSixth.name}</h3>
