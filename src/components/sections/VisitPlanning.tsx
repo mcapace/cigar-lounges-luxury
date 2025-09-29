@@ -28,13 +28,15 @@ export function VisitPlanning() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <Image 
-              src={davidoffBrand.logo} 
-              alt={davidoffBrand.name} 
-              width={80}
-              height={24}
-              className="h-12 mb-6 object-contain" 
-            />
+            <div className="flex justify-center mb-6">
+              <Image 
+                src={davidoffBrand.logo} 
+                alt={davidoffBrand.name} 
+                width={120}
+                height={36}
+                className="h-16 object-contain" 
+              />
+            </div>
             <h3 className="text-xl font-medium mb-4 text-charcoal">{davidoffMadison.name}</h3>
             <div className="space-y-3 text-gray-600 body-text">
               <p className="flex items-start gap-3">
@@ -68,13 +70,15 @@ export function VisitPlanning() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
           >
-            <Image 
-              src={barclayRexBrand.logo} 
-              alt={barclayRexBrand.name} 
-              width={80}
-              height={24}
-              className="h-12 mb-6 object-contain" 
-            />
+            <div className="flex justify-center mb-6">
+              <Image 
+                src={barclayRexBrand.logo} 
+                alt={barclayRexBrand.name} 
+                width={120}
+                height={36}
+                className="h-16 object-contain" 
+              />
+            </div>
             <h3 className="text-xl font-medium mb-4 text-charcoal">{barclayRex.name}</h3>
             <div className="space-y-3 text-gray-600 body-text">
               <p className="flex items-start gap-3">
@@ -120,13 +124,15 @@ export function VisitPlanning() {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Image 
-              src={davidoffBrand.logo} 
-              alt={davidoffBrand.name} 
-              width={80}
-              height={24}
-              className="h-12 mb-6 object-contain" 
-            />
+            <div className="flex justify-center mb-6">
+              <Image 
+                src={davidoffBrand.logo} 
+                alt={davidoffBrand.name} 
+                width={120}
+                height={36}
+                className="h-16 object-contain" 
+              />
+            </div>
             <h3 className="text-xl font-medium mb-4 text-charcoal">{davidoffSixth.name}</h3>
             <div className="space-y-3 text-gray-600 body-text">
               <p className="flex items-start gap-3">
