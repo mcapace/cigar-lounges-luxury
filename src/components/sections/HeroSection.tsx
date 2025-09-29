@@ -85,7 +85,7 @@ export function HeroSection() {
             />
             <div className="w-px h-8 bg-gray-300"></div>
             <img 
-              src="/images/Barclay Rex logo.png" 
+              src="/images/Barclay Rex/barclay Rex updated logo.PNG" 
               alt="Barclay Rex"
               className="h-10 object-contain"
             />

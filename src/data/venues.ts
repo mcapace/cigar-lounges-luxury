@@ -222,7 +222,7 @@ export const venueData: { brands: Brand[] } = {
     {
       id: 'barclay-rex',
       name: 'Barclay Rex',
-      logo: '/images/Barclay Rex logo.png',
+      logo: '/images/Barclay Rex/barclay Rex updated logo.PNG',
       tagline: "New York's Original. Since 1910.",
       description: 'Before the towers rose, before Wall Street became the world\'s financial capital, there was Barclay Rex. For 115 years, this family-owned institution has been the keeper of New York\'s cigar heritage, surviving Prohibition, the Great Depression, and every transformation of the city around it.',
       accentColor: '#8B4513', // Vintage brown
@@ -233,10 +233,10 @@ export const venueData: { brands: Brand[] } = {
           shortName: 'Wall Street',
           tagline: 'A New York Institution',
           description: 'Founded by Vincent Nastri in 1910, Barclay Rex isn\'t just a tobacconist—it\'s a living museum of American cigar history. The same family that opened our doors 115 years ago still greets customers today, maintaining traditions while embracing innovation.',
-          address: '126 Pearl Street, New York, NY 10004',
+          address: '126 Pearl Street, New York, NY 10005',
           website: 'https://barclayrex.com/',
           neighborhood: 'Financial District',
-          phone: '(212) 809-9500',
+          phone: '(212) 962-3355',
           email: 'info@barclayrex.com',
           hours: {
             monday: '10:00 AM - 8:00 PM',
