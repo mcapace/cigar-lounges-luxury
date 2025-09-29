@@ -97,7 +97,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <img 
-              src="/images/Barclay Rex/barclay Rex updated logo.PNG" 
+              src="/images/Barclay Rex/barclay_Rex_updated_logo-removebg-preview.png" 
               alt="Barclay Rex"
               className="h-14 mb-6 object-contain"
             />

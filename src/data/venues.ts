@@ -222,7 +222,7 @@ export const venueData: { brands: Brand[] } = {
     {
       id: 'barclay-rex',
       name: 'Barclay Rex',
-      logo: '/images/Barclay Rex/barclay Rex updated logo.PNG',
+      logo: '/images/Barclay Rex/barclay_Rex_updated_logo-removebg-preview.png',
       tagline: "New York's Original. Since 1910.",
       description: 'Before the towers rose, before Wall Street became the world\'s financial capital, there was Barclay Rex. For 115 years, this family-owned institution has been the keeper of New York\'s cigar heritage, surviving Prohibition, the Great Depression, and every transformation of the city around it.',
       accentColor: '#8B4513', // Vintage brown

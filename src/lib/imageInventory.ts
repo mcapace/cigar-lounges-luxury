@@ -25,8 +25,8 @@ export const imageInventory: ImageAsset[] = [
 
   // Barclay Rex Logos
   {
-    path: '/images/Barclay Rex/barclay Rex updated logo.PNG',
-    filename: 'barclay Rex updated logo.PNG',
+    path: '/images/Barclay Rex/barclay_Rex_updated_logo-removebg-preview.png',
+    filename: 'barclay_Rex_updated_logo-removebg-preview.png',
     category: 'logo',
     quality: 'high',
     aspectRatio: 'original',

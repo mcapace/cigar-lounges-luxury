@@ -37,7 +37,7 @@ export function BarclayRexHeritage({ fullRotation = 'rotation-0' }: BarclayRexHe
       <div className="container mx-auto px-8 max-w-6xl">
         <div className="text-center mb-12">
           <Image 
-            src="/images/Barclay Rex/barclay Rex updated logo.PNG" 
+            src="/images/Barclay Rex/barclay_Rex_updated_logo-removebg-preview.png" 
             alt="Barclay Rex" 
             width={200}
             height={60}

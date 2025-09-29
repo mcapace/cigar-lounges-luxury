@@ -23,7 +23,7 @@ export function ImageTest() {
       <div className="mb-4">
         <h3 className="text-lg font-semibold mb-2">Barclay Rex Logo</h3>
         <Image
-          src="/images/Barclay Rex/barclay Rex updated logo.PNG"
+          src="/images/Barclay Rex/barclay_Rex_updated_logo-removebg-preview.png"
           alt="Barclay Rex Logo"
           width={200}
           height={80}
