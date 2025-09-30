@@ -157,7 +157,7 @@ export const venueData: { brands: Brand[] } = {
           name: 'Davidoff 6th Avenue',
           shortName: '6th Avenue',
           tagline: 'New York City - Midtown West',
-          description: 'Located in the heart of midtown. Sophisticated, elegant and intimate cigar experience.',
+          description: 'Davidoff 6th Avenue brings Swiss precision to the heart of Manhattan\'s creative district. Step inside a modern sanctuary designed for innovators and tastemakers — a place to unwind, connect, and enjoy a refined social destination.',
           address: '1390 6th Avenue, New York, NY 10019',
           website: 'https://us.davidoffgeneva.com/',
           neighborhood: 'Midtown West',

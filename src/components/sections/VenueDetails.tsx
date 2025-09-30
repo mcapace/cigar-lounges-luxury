@@ -222,7 +222,6 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
                 <TimelineItem year="1906" text="Zino Davidoff born in Kiev, Ukraine" />
                 <TimelineItem year="1911" text="Family opens Davidoff of Geneva tobacco shop" />
                 <TimelineItem year="1930s" text="World's first climate-controlled humidor room" />
-                <TimelineItem year="1940s" text="Protected French tobacco inventory during WWII" />
               </div>
               <div className="space-y-6">
                 <TimelineItem year="1968" text="Iconic white band collection introduced" />
