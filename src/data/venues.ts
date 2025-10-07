@@ -120,9 +120,8 @@ export const venueData: { brands: Brand[] } = {
             'Exclusive and Rare Limited Editions',
             'Private Humidor Lockers',
             'World-Class Sales Professionals',
-            'The Davidoff Vault Experience',
-            'Private Master Classes',
             'Private Event Lounge Rental',
+            'Tasting Events',
           ],
           signature: 'Home to exclusive flagship-only releases and the most comprehensive Davidoff selection in North America. Your journey begins the moment you enter our Madison Avenue sanctuary.',
           experience: {
@@ -182,12 +181,11 @@ export const venueData: { brands: Brand[] } = {
             ],
           },
           features: [
-            'Tasting Events',
-            'Exclusive and Rare Products',
-            'Private Lockers',
+            'Exclusive and Rare Limited Editions',
+            'Private Humidor Lockers',
+            'World-Class Sales Professionals',
             'Private Event Lounge Rental',
-            'Master Classes',
-            'Contemporary Ventilation System',
+            'Tasting Events',
           ],
           signature: 'Contemporary sanctuary for innovators and tastemakers. Designed for the modern aficionado, our 6th Avenue location pulses with the energy of New York.',
           experience: {
