@@ -130,7 +130,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
               
               <div className="prose prose-lg text-gray-700">
                 <p>
-                  {venue.description}
+                  {davidoffSixth.description}
                 </p>
               </div>
               
