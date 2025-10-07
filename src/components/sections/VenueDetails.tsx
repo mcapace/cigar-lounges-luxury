@@ -130,10 +130,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
               
               <div className="prose prose-lg text-gray-700">
                 <p>
-                  Davidoff 6th Avenue brings Swiss precision to the heart of Manhattan's 
-                  creative district. This contemporary sanctuary serves the city's innovators 
-                  and tastemakers, offering a more social, energetic take on the Davidoff 
-                  experience without compromising the excellence that defines our heritage.
+                  {venue.description}
                 </p>
               </div>
               
