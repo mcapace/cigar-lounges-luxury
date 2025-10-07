@@ -71,7 +71,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
                   Signature Features
                 </h3>
                 <ul className="space-y-2">
-                  {davidoffMadison.features.slice(0, 4).map((feature, idx) => (
+                  {davidoffMadison.features.slice(0, 5).map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-3">
                       <span className="w-2 h-2 bg-gold rounded-full"></span>
                       <span>{feature}</span>
@@ -140,7 +140,7 @@ export function VenueDetails({ fullRotation = 'rotation-0' }: VenueDetailsProps)
                   Signature Features
                 </h3>
                 <ul className="space-y-2">
-                  {davidoffSixth.features.slice(0, 4).map((feature, idx) => (
+                  {davidoffSixth.features.slice(0, 5).map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-3">
                       <span className="w-2 h-2 bg-gold rounded-full"></span>
                       <span>{feature}</span>
