@@ -42,7 +42,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
             <div className="mb-8 flex-grow">
               <div className="pb-4">
                 <h4 className="font-medium mb-2 text-charcoal">Flagship Features</h4>
-                <p className="text-sm text-gray-600">World-class sales professionals, extended hours, tasting events, exclusive and rare products, private lockers.</p>
+                <p className="text-sm text-gray-600">Exclusive and rare limited editions, private humidor lockers, world-class sales professionals, private event lounge rental, tasting events.</p>
               </div>
             </div>
             <a 
@@ -75,7 +75,7 @@ export function VenueShowcase({ venueOrder = 'order-1' }: VenueShowcaseProps) {
             <div className="mb-8 flex-grow">
               <div className="pb-4">
                 <h4 className="font-medium mb-2 text-charcoal">Boutique Features</h4>
-                <p className="text-sm text-gray-600">Tasting events, exclusive and rare products, private lockers.</p>
+                <p className="text-sm text-gray-600">Exclusive and rare limited editions, private humidor lockers, world-class sales professionals, private event lounge rental, tasting events.</p>
               </div>
             </div>
             <a 
